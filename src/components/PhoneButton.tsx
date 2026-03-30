@@ -18,11 +18,11 @@ export default function PhoneButton() {
 const StyledPhoneButton = styled(Button)({
     color: '#fff',
     borderColor: 'rgba(255,255,255,0.8)',
-    borderWidth: '2px',
+    borderWidth: '4px',
     textTransform: 'none',
     px: 3,
     py: 1.5,
-    fontSize: '15px',
+    fontSize: '20px',
     fontWeight: 600,
     '&:hover': {
         borderColor: '#fff',

@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import Navbar from './components/Navbar'
 import Hero from './components/HeroLanding/Hero'
+import HeroSplit from './components/HeroSplit/HeroSplit'
 
 const BelowFold = styled('section')({
   padding: '80px 40px',
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <HeroSplit />
         <BelowFold>
           <Typography variant="h2" gutterBottom>
             Velkommen til Skælskør Camping
