@@ -20,13 +20,9 @@ export default function BookingButton() {
 const StyledBookingButton = styled(Button)({
     px: 3,
     py: 1.5,
-    borderWidth: '2px',
-    fontSize: '15px',
+    borderWidth: '4px',
+    fontSize: '20px',
     fontWeight: 700,
     letterSpacing: '0.06em',
-    textTransform: 'uppercase',
-    boxShadow: '0 4px 16px rgba(46,125,125,0.5)',
-    '&:hover': {
-        boxShadow: '0 6px 20px rgba(46,125,125,0.6)',
-    }
+    textTransform: 'uppercase'
 });
