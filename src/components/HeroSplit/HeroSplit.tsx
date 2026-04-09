@@ -40,13 +40,13 @@ const TextPane = styled('div')({
 
 export default function HeroSplit () {
   return (
-    <Section sx={{ mx: 'auto', maxWidth: '1600px' }}>
-      <ImagePane>
+    <Section sx={{ display: "flex", alignItems: 'center', mx: 'auto', maxWidth: '1200px' }}>
+      <ImagePane sx={{ maxWidth: "600px", maxHeight: "600px" }}>
         <img src='https://placehold.co/600x600' alt='Placeholder billede' />
       </ImagePane>
       <TextPane>
-        <Typography variant='h2'>Din overskrift her</Typography>
-        <Typography variant='body1' sx={{ textAlign: "justify"  }}>
+        {/* <Typography variant='h3'>Velkommen til Skælskør Nor Camping</Typography> */}
+        <Typography variant='body1' sx={{ textAlign: "justify", fontSize: 20 }}>
           Elsker du om at vågne op til frisk luft og skøn natur? Eller friheden
           ved at tage på campingferie i dit helt eget tempo? På vores
           campingplads har vi plads til alle – både de helt garvede campister
