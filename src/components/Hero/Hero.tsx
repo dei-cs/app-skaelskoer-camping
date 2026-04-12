@@ -22,7 +22,7 @@ export default function Hero() {
             mb: 2,
           }}
         >
-          Skælskør<br />Camping
+          Skælskør<br />Nor<br />Camping
         </Typography>
         <Typography
           variant="subtitle1"
