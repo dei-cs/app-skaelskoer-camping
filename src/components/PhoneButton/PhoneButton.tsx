@@ -5,8 +5,8 @@ import { styled } from '@mui/material/styles';
 export default function PhoneButton() {
 
     return (
-        <StyledPhoneButton 
-            startIcon={<PhoneIcon />} 
+        <StyledPhoneButton
+            startIcon={<PhoneIcon />}
             href="tel:56891234"
             variant='outlined'
         >
@@ -18,7 +18,7 @@ export default function PhoneButton() {
 const StyledPhoneButton = styled(Button)({
     color: '#fff',
     borderColor: 'rgba(255,255,255,0.8)',
-    borderWidth: '4px',
+    borderWidth: '2px',
     textTransform: 'none',
     px: 3,
     py: 1.5,

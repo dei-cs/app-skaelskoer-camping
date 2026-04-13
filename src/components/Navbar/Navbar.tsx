@@ -10,7 +10,6 @@ import EmailIcon from '@mui/icons-material/Email'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import BookingButton from '../BookingButton/BookingButton'
-import logoBadge from '../../assets/images/logo-badge.webp'
 import logoSquare from '../../assets/images/logo-square.webp'
 
 export default function Navbar () {
@@ -96,11 +95,23 @@ export default function Navbar () {
           }}
         >
           
-          <Box sx={{ width: 200, height: 120, overflow: 'hidden', flexShrink: 0 }}>
+          <Box sx={{ width: 200, height: 120, overflow: 'hidden', flexShrink: 0, position: 'relative' }}>
+            <Box sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 190,
+              height: 90,
+              borderRadius: 2,
+              backgroundColor: scrolled ? 'transparent' : 'rgba(255,255,255,0.65)',
+              transition: 'background-color 0.3s ease',
+            }} />
             <img
               src={logoSquare}
               alt='Skælskør Camping Logo'
               style={{
+                position: 'relative',
                 width: '100%',
                 height: 'auto',
                 display: 'block',
@@ -151,37 +162,4 @@ const NavLink = styled(Link, {
   alignItems: 'center',
   '&:hover': { opacity: 0.75 },
   '@media (max-width: 900px)': { fontSize: 11 }
-}))
-
-const LogoBadge = styled(Link, {
-  shouldForwardProp: prop => prop !== '$scrolled'
-})<{ $scrolled: boolean }>(({ $scrolled }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: 60,
-  height: 60,
-  borderRadius: '50%',
-  border: `2px solid ${$scrolled ? '#2e7d7d' : 'rgba(255,255,255,0.85)'}`,
-  textDecoration: 'none',
-  color: $scrolled ? '#2e7d7d' : '#fff',
-  lineHeight: 1.2,
-  textAlign: 'center',
-  padding: 4,
-  flexShrink: 0,
-  transition: 'border-color 0.3s, color 0.3s',
-  '& .badge-top': {
-    fontSize: 7,
-    letterSpacing: '0.1em',
-    textTransform: 'uppercase',
-    fontWeight: 500
-  },
-  '& .badge-main': {
-    fontSize: 12,
-    fontWeight: 800,
-    letterSpacing: '0.04em',
-    textTransform: 'uppercase'
-  },
-  '& .badge-bottom': { fontSize: 7, letterSpacing: '0.08em', fontWeight: 500 }
 }))

@@ -12,6 +12,10 @@ const theme = createTheme({
       dark: '#1f5c5c',
       contrastText: '#ffffff',
     },
+    background: {
+      default: '#ffffff',
+      paper: '#f5f4ef',
+    },
   },
   typography: {
     fontFamily: "system-ui, 'Segoe UI', Roboto, sans-serif",
@@ -32,7 +36,7 @@ const theme = createTheme({
           line-height: 145%;
           letter-spacing: 0.18px;
           color: #6b6375;
-          background: #fff;
+          background: #ffffff;
         }
 
         @media (max-width: 1024px) {
