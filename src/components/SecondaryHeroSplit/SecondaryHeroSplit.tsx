@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles'
 import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
 
-interface HeroSplitProps {
+interface SecondaryHeroSplitProps {
   title: string
   paragraphs: string[]
   imageSrc: string
@@ -12,13 +12,10 @@ interface HeroSplitProps {
   backgroundColor?: 'default' | 'paper'
 }
 
-export default function HeroSplit({ title, paragraphs, imageSrc, imageAlt = '', showActions = true, backgroundColor = 'default' }: HeroSplitProps) {
+export default function SecondaryHeroSplit({ title, paragraphs, imageSrc, imageAlt = '', showActions = true, backgroundColor = 'default' }: SecondaryHeroSplitProps) {
   return (
     <Wrapper backgroundColor={backgroundColor}>
       <Section>
-        <ImagePane>
-          <img src={imageSrc} alt={imageAlt} />
-        </ImagePane>
         <TextPane>
           <Typography variant='h4'>{title}</Typography>
           {paragraphs.map((p, i) => (
@@ -35,6 +32,9 @@ export default function HeroSplit({ title, paragraphs, imageSrc, imageAlt = '', 
             </ButtonRow>
           )}
         </TextPane>
+        <ImagePane>
+          <img src={imageSrc} alt={imageAlt} />
+        </ImagePane>
       </Section>
     </Wrapper>
   )
@@ -55,7 +55,20 @@ const Section = styled('section')({
   minHeight: 480,
   margin: '0 auto',
   '@media (max-width: 768px)': {
-    flexDirection: 'column',
+    flexDirection: 'column-reverse',
+  },
+})
+
+const TextPane = styled('div')({
+  width: '50%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  padding: '48px',
+  gap: '16px',
+  '@media (max-width: 768px)': {
+    width: '100%',
+    padding: '40px 24px',
   },
 })
 
@@ -75,19 +88,6 @@ const ImagePane = styled('div')({
     minHeight: 300,
     maxWidth: '100%',
     borderRadius: 0,
-  },
-})
-
-const TextPane = styled('div')({
-  width: '50%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: '48px',
-  gap: '16px',
-  '@media (max-width: 768px)': {
-    width: '100%',
-    padding: '40px 24px',
   },
 })
 

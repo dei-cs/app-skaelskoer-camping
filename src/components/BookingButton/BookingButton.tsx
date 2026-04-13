@@ -20,7 +20,7 @@ export default function BookingButton() {
 const StyledBookingButton = styled(Button)({
     px: 3,
     py: 1.5,
-    borderWidth: '4px',
+    borderWidth: '2px',
     fontSize: '20px',
     fontWeight: 700,
     letterSpacing: '0.06em',
