@@ -62,7 +62,7 @@ const Section = styled('section')({
 const ImagePane = styled('div')({
   width: '50%',
   maxWidth: '600px',
-  borderRadius: '25px',
+  borderRadius: '15px',
   overflow: 'hidden',
   '& img': {
     width: '100%',
