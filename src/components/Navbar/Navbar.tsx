@@ -130,7 +130,7 @@ export default function Navbar () {
           >
             {[
               { href: '#overnatning', label: 'Overnatning' },
-              { href: '#faciliteter', label: 'Faciliteter' },
+              // { href: '#faciliteter', label: 'Faciliteter' },
               { href: '#priser', label: 'Priser' },
               { href: '#praktisk', label: 'Praktisk' },
               { href: '#kontakt', label: 'Kontakt' }
