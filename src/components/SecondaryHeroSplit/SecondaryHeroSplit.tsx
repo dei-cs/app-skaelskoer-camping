@@ -75,7 +75,7 @@ const TextPane = styled('div')({
 const ImagePane = styled('div')({
   width: '50%',
   maxWidth: '600px',
-  borderRadius: '15px',
+  borderRadius: '5px',
   overflow: 'hidden',
   '& img': {
     width: '100%',

@@ -1,10 +1,12 @@
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material/styles'
+import { styled, alpha, useTheme } from '@mui/material/styles'
 import heroVideo from '../../assets/videos/hero-waterfront-comp.mp4'
 import PhoneButton from '../PhoneButton/PhoneButton'
 import BookingButton from '../BookingButton/BookingButton'
 
 export default function Hero() {
+  const theme = useTheme()
+
   return (
     <HeroSection>
       <VideoBackground autoPlay muted loop playsInline src={heroVideo} />
@@ -12,7 +14,7 @@ export default function Hero() {
         <Typography
           variant="h1"
           sx={{
-            color: '#fff',
+            color: theme.palette.primary.contrastText,
             fontWeight: 800,
             fontSize: 'clamp(48px, 8vw, 96px)',
             letterSpacing: '0.06em',
@@ -27,13 +29,13 @@ export default function Hero() {
         <Typography
           variant="subtitle1"
           sx={{
-            color: 'rgba(255,255,255,0.9)',
+            color: alpha(theme.palette.primary.contrastText, 0.9),
             fontSize: 'clamp(16px, 2vw, 22px)',
             letterSpacing: '0.08em',
             textShadow: '0 1px 6px rgba(0,0,0,0.4)',
           }}
         >
-          Naturskønt ved vandet — Syd for Sjælland
+          FRED, RO & HYGGE
         </Typography>
         <ButtonRow>
           <PhoneButton />
@@ -44,13 +46,19 @@ export default function Hero() {
       <WaveContainer>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 80"
+          viewBox="0 0 1440 140"
           preserveAspectRatio="none"
-          style={{ display: 'block', width: '100%', height: '80px' }}
+          style={{ display: 'block', width: '100%', height: '140px' }}
         >
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor={theme.palette.primary.main} stopOpacity={1} />
+              <stop offset="100%" stopColor={theme.palette.background.default} stopOpacity={1} />
+            </linearGradient>
+          </defs>
           <path
-            d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
-            style={{ fill: '#fff' }}
+            d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,140 L0,140 Z"
+            fill="url(#waveGradient)"
           />
         </svg>
       </WaveContainer>
@@ -58,7 +66,7 @@ export default function Hero() {
   )
 }
 
-const HeroSection = styled('section')({
+const HeroSection = styled('section')(({ theme }) => ({
   height: '100dvh',
   width: '100%',
   position: 'relative',
@@ -69,9 +77,9 @@ const HeroSection = styled('section')({
     content: '""',
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to bottom, rgba(20, 50, 50, 0.35) 0%, rgba(10, 30, 30, 0.15) 45%, rgba(10, 40, 40, 0.55) 100%)',
+    background: 'none',
   },
-})
+}))
 
 const VideoBackground = styled('video')({
   position: 'absolute',
@@ -80,6 +88,7 @@ const VideoBackground = styled('video')({
   height: '100%',
   objectFit: 'cover',
   zIndex: 0,
+  filter: 'sepia(0.2) saturate(1.1) brightness(0.95)',
 })
 
 const HeroContent = styled('div')({

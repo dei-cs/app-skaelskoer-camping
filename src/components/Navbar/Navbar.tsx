@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Link from '@mui/material/Link'
-import { styled } from '@mui/material/styles'
+import { styled, alpha, useTheme } from '@mui/material/styles'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
 import FacebookIcon from '@mui/icons-material/Facebook'
@@ -14,6 +14,7 @@ import logoSquare from '../../assets/images/logo-square.webp'
 
 export default function Navbar () {
   const [scrolled, setScrolled] = useState(false)
+  const theme = useTheme()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60)
@@ -22,27 +23,27 @@ export default function Navbar () {
   }, [])
 
   const linkSx = {
-    color: 'rgba(255,255,255,0.75)',
+    color: alpha(theme.palette.primary.contrastText, 0.75),
     textDecoration: 'none',
     display: 'inline-flex',
     alignItems: 'center',
     gap: '5px',
     transition: 'color 0.2s',
-    '&:hover': { color: '#fff' }
+    '&:hover': { color: theme.palette.primary.contrastText }
   }
 
   return (
     <Box position='fixed' top={0} left={0} right={0} sx={{ zIndex: 1100 }}>
       <Box
         sx={{
-          background: '#1a1a1a',
+          background: theme.palette.primary.dark,
           height: 38,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           px: { xs: '16px', sm: '40px' },
           fontSize: { xs: 11, sm: 12 },
-          color: 'rgba(255,255,255,0.75)'
+          color: alpha(theme.palette.primary.contrastText, 0.75)
         }}
       >
         {/* Left — reserved for reviews */}
@@ -81,7 +82,7 @@ export default function Navbar () {
         position='static'
         elevation={0}
         sx={{
-          background: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
+          background: scrolled ? alpha(theme.palette.background.default, 0.97) : 'transparent',
           backdropFilter: scrolled ? 'blur(8px)' : 'none',
           boxShadow: scrolled ? '0 1px 8px rgba(0,0,0,0.1)' : 'none',
           transition: 'background 0.3s ease, box-shadow 0.3s ease'
@@ -103,8 +104,8 @@ export default function Navbar () {
               transform: 'translate(-50%, -50%)',
               width: 190,
               height: 90,
-              borderRadius: 2,
-              backgroundColor: scrolled ? 'transparent' : 'rgba(255,255,255,0.65)',
+              borderRadius: "5px",
+              backgroundColor: scrolled ? 'transparent' : alpha(theme.palette.primary.contrastText, 0.65),
               transition: 'background-color 0.3s ease',
             }} />
             <img
@@ -148,9 +149,9 @@ export default function Navbar () {
 }
 
 const NavLink = styled(Link, {
-  shouldForwardProp: prop => prop !== '$scrolled'
-})<{ $scrolled: boolean }>(({ $scrolled }) => ({
-  color: $scrolled ? '#2e7d7d' : '#fff',
+  shouldForwardProp: prop => prop !== '$scrolled',
+})<{ $scrolled: boolean }>(({ theme, $scrolled }) => ({
+  color: $scrolled ? theme.palette.primary.main : theme.palette.primary.contrastText,
   textDecoration: 'none',
   fontSize: 16,
   fontWeight: 700,

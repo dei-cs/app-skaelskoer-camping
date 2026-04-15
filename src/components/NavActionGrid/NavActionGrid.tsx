@@ -69,7 +69,7 @@ const Inner = styled('div')({
 const GridItem = styled('a')(({ theme }) => ({
   width: '100%',
   aspectRatio: '1',
-  borderRadius: 12,
+  borderRadius: "5px",
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
