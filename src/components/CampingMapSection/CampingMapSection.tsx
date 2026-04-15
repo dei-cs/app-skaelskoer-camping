@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles'
 import campingSpotMap from '../../assets/images/camping-spot-map.webp'
 import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
-import { Phone } from '@mui/icons-material'
+import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
 
 const TITLE = 'Priser'
 
@@ -46,7 +46,7 @@ export default function CampingMapSection ({
   showActions = false
 }: CampingMapSectionProps) {
   return (
-    <Wrapper backgroundColor={backgroundColor}>
+    <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
         <MapPane>
           <img src={campingSpotMap} alt='Kort over campingpladsen' />
@@ -92,23 +92,13 @@ export default function CampingMapSection ({
           )}
         </PricePane>
       </Section>
-    </Wrapper>
+    </SectionWrapper>
   )
 }
 
-const Wrapper = styled('div', {
-  shouldForwardProp: prop => prop !== 'backgroundColor'
-})<{ backgroundColor: 'default' | 'paper' }>(({ theme, backgroundColor }) => ({
-  background: theme.palette.background[backgroundColor],
-  paddingTop: '25px',
-  paddingBottom: '25px'
-}))
-
-const Section = styled('section')({
+const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
-  maxWidth: '1200px',
-  margin: '0 auto',
   '@media (max-width: 768px)': {
     flexDirection: 'column'
   }

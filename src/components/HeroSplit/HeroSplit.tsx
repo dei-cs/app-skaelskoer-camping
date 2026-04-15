@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
+import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
 
 interface HeroSplitProps {
   title: string
@@ -14,7 +15,7 @@ interface HeroSplitProps {
 
 export default function HeroSplit({ title, paragraphs, imageSrc, imageAlt = '', showActions = true, backgroundColor = 'default' }: HeroSplitProps) {
   return (
-    <Wrapper backgroundColor={backgroundColor}>
+    <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
         <ImagePane>
           <img src={imageSrc} alt={imageAlt} />
@@ -36,24 +37,14 @@ export default function HeroSplit({ title, paragraphs, imageSrc, imageAlt = '', 
           )}
         </TextPane>
       </Section>
-    </Wrapper>
+    </SectionWrapper>
   )
 }
 
-const Wrapper = styled('div', {
-  shouldForwardProp: (prop) => prop !== 'backgroundColor',
-})<{ backgroundColor: 'default' | 'paper' }>(({ theme, backgroundColor }) => ({
-  background: theme.palette.background[backgroundColor],
-  paddingTop: "25px",
-  paddingBottom: "25px",
-}))
-
-const Section = styled('section')({
+const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
-  maxWidth: '1200px',
   minHeight: 480,
-  margin: '0 auto',
   '@media (max-width: 768px)': {
     flexDirection: 'column',
   },

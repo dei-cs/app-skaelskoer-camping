@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Box from '@mui/material/Box'
@@ -96,7 +97,8 @@ export default function Navbar () {
           }}
         >
           
-          <Box sx={{ width: 200, height: 120, overflow: 'hidden', flexShrink: 0, position: 'relative' }}>
+          <RouterLink to='/' style={{ display: 'block', flexShrink: 0 }}>
+          <Box sx={{ width: 200, height: 120, overflow: 'hidden', position: 'relative' }}>
             <Box sx={{
               position: 'absolute',
               top: '50%',
@@ -121,6 +123,7 @@ export default function Navbar () {
               }}
             />
           </Box>
+          </RouterLink>
 
           <Stack
             direction='row'
@@ -130,13 +133,13 @@ export default function Navbar () {
             sx={{ display: { xs: 'none', sm: 'flex' } }}
           >
             {[
-              { href: '#overnatning', label: 'Overnatning' },
-              // { href: '#faciliteter', label: 'Faciliteter' },
-              { href: '#priser', label: 'Priser' },
-              { href: '#praktisk', label: 'Praktisk' },
-              { href: '#kontakt', label: 'Kontakt' }
-            ].map(({ href, label }) => (
-              <NavLink key={href} href={href} $scrolled={scrolled}>
+              { to: '/overnatning', label: 'Overnatning' },
+              // { to: '#faciliteter', label: 'Faciliteter' },
+              { to: '#priser', label: 'Priser' },
+              { to: '#praktisk', label: 'Praktisk' },
+              { to: '#kontakt', label: 'Kontakt' }
+            ].map(({ to, label }) => (
+              <NavLink key={to} to={to} $scrolled={scrolled}>
                 {label}
               </NavLink>
             ))}
@@ -148,7 +151,7 @@ export default function Navbar () {
   )
 }
 
-const NavLink = styled(Link, {
+const NavLink = styled(RouterLink, {
   shouldForwardProp: prop => prop !== '$scrolled',
 })<{ $scrolled: boolean }>(({ theme, $scrolled }) => ({
   color: $scrolled ? theme.palette.primary.main : theme.palette.primary.contrastText,
