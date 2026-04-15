@@ -1,10 +1,10 @@
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import { styled } from '@mui/material/styles'
-import ScheduleIcon from '@mui/icons-material/Schedule'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
 
 interface OpeningHourEntry {
   label: string
@@ -34,7 +34,7 @@ export default function LocationSection({
   const hasOpeningHours = openingHours && openingHours.length > 0
 
   return (
-    <Wrapper backgroundColor={backgroundColor}>
+    <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
         <MapPane>
           <iframe
@@ -114,24 +114,14 @@ export default function LocationSection({
           )}
         </InfoPane>
       </Section>
-    </Wrapper>
+    </SectionWrapper>
   )
 }
 
-const Wrapper = styled('div', {
-  shouldForwardProp: (prop) => prop !== 'backgroundColor',
-})<{ backgroundColor: 'default' | 'paper' }>(({ theme, backgroundColor }) => ({
-  background: theme.palette.background[backgroundColor],
-  paddingTop: '25px',
-  paddingBottom: '25px',
-}))
-
-const Section = styled('section')({
+const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
-  maxWidth: '1200px',
   minHeight: 480,
-  margin: '0 auto',
   '@media (max-width: 768px)': {
     flexDirection: 'column',
   },
