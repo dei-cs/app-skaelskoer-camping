@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button'
 import PhoneIcon from '@mui/icons-material/Phone'
-import { styled } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 
 export default function PhoneButton() {
 
@@ -15,9 +15,9 @@ export default function PhoneButton() {
     );
 };
 
-const StyledPhoneButton = styled(Button)({
-    color: '#fff',
-    borderColor: 'rgba(255,255,255,0.8)',
+const StyledPhoneButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.primary.contrastText,
+    borderColor: alpha(theme.palette.primary.contrastText, 0.8),
     borderWidth: '2px',
     textTransform: 'none',
     px: 3,
@@ -25,8 +25,9 @@ const StyledPhoneButton = styled(Button)({
     fontSize: '20px',
     fontWeight: 600,
     '&:hover': {
-        borderColor: '#fff',
+        color: theme.palette.primary.dark,
+        borderColor: theme.palette.primary.contrastText,
         borderWidth: '2px',
-        background: 'rgba(255,255,255,0.1)',
+        background: alpha(theme.palette.primary.contrastText, 0.1),
     },
-});
+}));

@@ -53,7 +53,7 @@ export default function LocationSection({
           {hasOpeningHours && (
             <InfoGroup>
               <InfoRow>
-                <ScheduleIcon fontSize='small' color='primary' />
+                {/* <ScheduleIcon fontSize='small' color='primary' /> */}
                 <Typography variant='body1' fontWeight={600}>
                   Åbningstider
                 </Typography>
@@ -140,7 +140,7 @@ const Section = styled('section')({
 const MapPane = styled('div')({
   width: '50%',
   maxWidth: '600px',
-  borderRadius: '15px',
+  borderRadius: '5px',
   overflow: 'hidden',
   '& iframe': {
     display: 'block',
