@@ -1,16 +1,20 @@
 import Navbar from '../../components/Navbar/Navbar'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
+import PageHero from '../../components/PageHero/PageHero'
+import AccommodationCardGrid from '../../components/AccommodationCardGrid/AccommodationCardGrid'
+import heroKilde from '../../assets/images/hero-kilde.png'
 
 export default function AccommodationPage() {
   return (
     <>
       <Navbar />
       <main>
-        {/* pt: 106px, exact offset of the navbar height to ensure content starts just below it */}
-        <Box sx={{ pt: '106px', px: { xs: 2, sm: 5 }, maxWidth: 1200, mx: 'auto' }}>
-          {/* Content sections go here */}
-        </Box>
+        <PageHero
+          title="Overnatning"
+          subtitle="Find din plads ved vandet"
+          imageSrc={heroKilde}
+          imageAlt="Campingpladser ved Skælskør Nor"
+        />
+        <AccommodationCardGrid />
       </main>
     </>
   )

@@ -49,7 +49,7 @@ export default function LocationSection({
         </MapPane>
         <InfoPane>
           {title && <Typography variant='h4'>{title}</Typography>}
-
+          {/* <Typography variant='h4'>Kontakt Informationer</Typography> */}
           {hasOpeningHours && (
             <InfoGroup>
               <InfoRow>
