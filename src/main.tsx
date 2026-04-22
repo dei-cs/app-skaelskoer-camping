@@ -7,18 +7,24 @@ import App from './App.tsx'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1b3b6f',
-      light: '#bee9e8',
-      dark: '#21295c',
+      main: '#2c5f6e',
+      light: '#e8f3f5',
+      dark: '#1d3f4a',
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#8b6f47',
+      light: '#c4a882',
+      dark: '#5e4a2e',
       contrastText: '#ffffff',
     },
     background: {
-      default: '#ffffff',
-      paper: '#f5f4ef',
+      default: '#f5f0e8',
+      paper: '#ece4d4',
     },
   },
   typography: {
-    fontFamily: "system-ui, 'Segoe UI', Roboto, sans-serif",
+    fontFamily: "'Barlow', 'Segoe UI', sans-serif",
   },
   components: {
     MuiCssBaseline: {
@@ -29,14 +35,18 @@ const theme = createTheme({
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+          --color-sand: #c8b090;
+          --color-sand-light: #ece4d4;
+          --color-fjord: #2c5f6e;
+          --color-driftwood: #8b6f47;
         }
 
         html {
           font-size: 18px;
           line-height: 145%;
           letter-spacing: 0.18px;
-          color: #6b6375;
-          background: #ffffff;
+          color: #3d3530;
+          background: #f5f0e8;
         }
 
         @media (max-width: 1024px) {
@@ -49,21 +59,21 @@ const theme = createTheme({
         }
 
         h1, h2 {
-          font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-          font-weight: 500;
+          font-family: 'Playfair Display', Georgia, serif;
+          font-weight: 700;
           color: #08060d;
         }
 
         h1 {
           font-size: 56px;
-          letter-spacing: -1.68px;
+          letter-spacing: -0.5px;
           margin: 32px 0;
         }
 
         h2 {
           font-size: 24px;
           line-height: 118%;
-          letter-spacing: -0.24px;
+          letter-spacing: 0px;
           margin: 0 0 8px;
         }
 
@@ -83,6 +93,12 @@ const theme = createTheme({
           line-height: 135%;
           padding: 4px 8px;
           background: #f4f3ec;
+        }
+
+        .MuiPaper-root {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+          background-size: 200px 200px;
+          background-repeat: repeat;
         }
 
         /* Dark mode temporarily disabled — uncomment to re-enable

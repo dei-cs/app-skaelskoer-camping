@@ -93,23 +93,13 @@ export default function Navbar () {
           sx={{
             px: { xs: '16px', md: '40px' },
             py: '4px',
-            minHeight: '68px !important'
+            minHeight: '68px !important',
+            position: 'relative',
           }}
         >
           
           <RouterLink to='/' style={{ display: 'block', flexShrink: 0 }}>
           <Box sx={{ width: 200, height: 120, overflow: 'hidden', position: 'relative' }}>
-            <Box sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: 190,
-              height: 90,
-              borderRadius: "5px",
-              backgroundColor: scrolled ? 'transparent' : alpha(theme.palette.primary.contrastText, 0.65),
-              transition: 'background-color 0.3s ease',
-            }} />
             <img
               src={logoSquare}
               alt='Skælskør Camping Logo'
@@ -119,7 +109,9 @@ export default function Navbar () {
                 height: 'auto',
                 display: 'block',
                 marginTop: '50%',
-                transform: 'translateY(-70%)'
+                transform: 'translateY(-70%)',
+                filter: scrolled ? 'none' : 'brightness(0) invert(1)',
+                transition: 'filter 0.3s ease',
               }}
             />
           </Box>
@@ -128,9 +120,12 @@ export default function Navbar () {
           <Stack
             direction='row'
             gap={3.5}
-            flex={1}
-            justifyContent='center'
-            sx={{ display: { xs: 'none', sm: 'flex' } }}
+            sx={{
+              display: { xs: 'none', sm: 'flex' },
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+            }}
           >
             {[
               { to: '/overnatning', label: 'Overnatning' },
@@ -144,7 +139,9 @@ export default function Navbar () {
               </NavLink>
             ))}
           </Stack>
-          <BookingButton />
+          <Box sx={{ ml: 'auto' }}>
+            <BookingButton />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
@@ -158,12 +155,26 @@ const NavLink = styled(RouterLink, {
   textDecoration: 'none',
   fontSize: 16,
   fontWeight: 700,
-  letterSpacing: '0.08em',
-  textTransform: 'uppercase',
+  letterSpacing: '0.04em',
+  textTransform: 'none',
   textShadow: $scrolled ? 'none' : '0 1px 4px rgba(0,0,0,0.4)',
   transition: 'opacity 0.2s, color 0.3s',
   display: 'inline-flex',
   alignItems: 'center',
-  '&:hover': { opacity: 0.75 },
+  position: 'relative',
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    bottom: -2,
+    left: 0,
+    right: 0,
+    height: '1.5px',
+    backgroundColor: 'currentColor',
+    transform: 'scaleX(0)',
+    transformOrigin: 'left center',
+    transition: 'transform 0.25s ease',
+  },
+  '&:hover': { opacity: 1 },
+  '&:hover::after': { transform: 'scaleX(1)' },
   '@media (max-width: 900px)': { fontSize: 11 }
 }))

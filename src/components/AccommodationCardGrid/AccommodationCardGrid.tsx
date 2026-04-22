@@ -66,10 +66,10 @@ export default function AccommodationCardGrid() {
             <Grid key={card.href} size={{ xs: 12, sm: 6, md: 3 }}>
               <StyledCard>
                 <StyledCardActionArea component={RouterLink} to={card.href}>
-                  <Box sx={{ height: 200, overflow: 'hidden' }}>
+                  <Box sx={{ height: 240, overflow: 'hidden' }}>
                     <CardMedia
                       component="img"
-                      height="200"
+                      height="240"
                       image={card.imageSrc}
                       alt={card.imageAlt}
                       sx={{
@@ -114,12 +114,12 @@ const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: theme.palette.background.paper,
-  border: `1px solid ${alpha(theme.palette.primary.main, 0.12)}`,
-  borderRadius: 8,
+  border: 'none',
+  borderRadius: 12,
   transition: 'transform 0.2s, box-shadow 0.2s',
   '&:hover': {
     transform: 'translateY(-6px)',
-    boxShadow: theme.shadows[6],
+    boxShadow: '0 16px 40px rgba(44,95,110,0.14)',
   },
 }))
 
@@ -134,12 +134,19 @@ const StyledCardActionArea = styled(CardActionArea)({
 const MereInfoBadge = styled(Box)(({ theme }) => ({
   display: 'inline-flex',
   alignItems: 'center',
-  backgroundColor: theme.palette.primary.main,
-  color: theme.palette.primary.contrastText,
+  backgroundColor: 'transparent',
+  color: theme.palette.primary.main,
   fontSize: 13,
-  fontWeight: 700,
-  padding: '5px 10px',
-  borderRadius: 4,
+  fontWeight: 600,
+  padding: 0,
+  paddingBottom: '2px',
+  borderRadius: 0,
+  borderBottom: `1.5px solid ${theme.palette.primary.main}`,
   letterSpacing: '0.04em',
-  textTransform: 'uppercase',
+  gap: 4,
+  transition: 'color 0.2s, border-bottom-color 0.2s',
+  '.MuiCardActionArea-root:hover &': {
+    color: theme.palette.primary.dark,
+    borderBottomColor: theme.palette.primary.dark,
+  },
 }))
