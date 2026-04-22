@@ -1,4 +1,5 @@
 import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box'
 import { styled, alpha, useTheme } from '@mui/material/styles'
 import heroVideo from '../../assets/videos/hero-waterfront-comp.mp4'
 import PhoneButton from '../PhoneButton/PhoneButton'
@@ -15,10 +16,10 @@ export default function Hero() {
           variant="h1"
           sx={{
             color: theme.palette.primary.contrastText,
-            fontWeight: 800,
+            fontWeight: 700,
             fontSize: 'clamp(48px, 8vw, 96px)',
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase',
+            fontFamily: "'Playfair Display', Georgia, serif",
+            letterSpacing: '-0.01em',
             textShadow: '0 2px 20px rgba(0,0,0,0.5)',
             lineHeight: 1.05,
             mb: 2,
@@ -26,20 +27,24 @@ export default function Hero() {
         >
           Skælskør<br />Nor<br />Camping
         </Typography>
+        <Box sx={{ width: 60, height: '2px', backgroundColor: 'rgba(255,255,255,0.4)', mx: 'auto', my: 2 }} />
         <Typography
           variant="subtitle1"
+          component="p"
           sx={{
             color: alpha(theme.palette.primary.contrastText, 0.9),
-            fontSize: 'clamp(16px, 2vw, 22px)',
-            letterSpacing: '0.08em',
+            fontSize: 'clamp(18px, 2.2vw, 26px)',
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontStyle: 'italic',
+            letterSpacing: '0.12em',
             textShadow: '0 1px 6px rgba(0,0,0,0.4)',
           }}
         >
-          FRED, RO & HYGGE
+          Fred, ro & hygge
         </Typography>
         <ButtonRow>
-          <PhoneButton />
           <BookingButton />
+          <PhoneButton />
         </ButtonRow>
       </HeroContent>
 
@@ -77,7 +82,7 @@ const HeroSection = styled('section')(({ theme }) => ({
     content: '""',
     position: 'absolute',
     inset: 0,
-    background: 'none',
+    zIndex: 1,
   },
 }))
 
@@ -88,12 +93,12 @@ const VideoBackground = styled('video')({
   height: '100%',
   objectFit: 'cover',
   zIndex: 0,
-  filter: 'grayscale(0.05) brightness(0.95) contrast(0.95)',
+  filter: 'grayscale(0.05) brightness(1.0) contrast(0.95)',
 })
 
 const HeroContent = styled('div')({
   position: 'relative',
-  zIndex: 1,
+  zIndex: 2,
   textAlign: 'center',
   padding: '0 24px',
 })
@@ -112,5 +117,5 @@ const WaveContainer = styled('div')({
   left: 0,
   right: 0,
   lineHeight: 0,
-  zIndex: 2,
+  zIndex: 3,
 })
