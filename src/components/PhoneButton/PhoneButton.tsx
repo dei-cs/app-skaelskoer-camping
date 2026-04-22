@@ -26,8 +26,8 @@ const StyledPhoneButton = styled(Button)(({ theme }) => ({
     fontWeight: 600,
     '&:hover': {
         color: theme.palette.primary.dark,
-        borderColor: theme.palette.primary.contrastText,
+        borderColor: theme.palette.primary.dark,
         borderWidth: '2px',
-        background: alpha(theme.palette.primary.contrastText, 0.1),
+        background: alpha(theme.palette.primary.contrastText, 0.4),
     },
 }));
