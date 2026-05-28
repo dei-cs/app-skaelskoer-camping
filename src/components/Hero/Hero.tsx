@@ -28,7 +28,7 @@ export default function Hero() {
           Skælskør<br />Nor<br />Camping
         </Typography>
         <Box sx={{ width: 60, height: '2px', backgroundColor: 'rgba(255,255,255,0.4)', mx: 'auto', my: 2 }} />
-        <Typography
+        {/* <Typography
           variant="subtitle1"
           component="p"
           sx={{
@@ -41,7 +41,7 @@ export default function Hero() {
           }}
         >
           Fred, ro & hygge
-        </Typography>
+        </Typography> */}
         <ButtonRow>
           <BookingButton />
           <PhoneButton />
@@ -74,6 +74,7 @@ export default function Hero() {
 const HeroSection = styled('section')(({ theme }) => ({
   height: '100dvh',
   width: '100%',
+  marginBottom: 50,
   position: 'relative',
   display: 'flex',
   alignItems: 'center',

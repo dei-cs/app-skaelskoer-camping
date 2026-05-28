@@ -17,6 +17,7 @@ export default function SecondaryHeroSplit({ title, paragraphs, imageSrc, imageA
   return (
     <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
+        {/* <TextBackground /> */}
         <TextPane>
           <Typography variant='h4'>{title}</Typography>
           {paragraphs.map((p, i) => (
@@ -45,10 +46,25 @@ const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
   minHeight: 480,
+  position: 'relative',
   '@media (max-width: 768px)': {
     flexDirection: 'column-reverse',
   },
 })
+
+const TextBackground = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  display: 'flex',
+  width: '65%',
+  height: 'calc(100% + 80px)',
+  top: '-40px', 
+  border: '0.5px solid black',
+  backgroundColor: theme.palette.primary.light,
+  zIndex: 0,
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
+}))
 
 const TextPane = styled('div')({
   width: '50%',
@@ -57,6 +73,8 @@ const TextPane = styled('div')({
   justifyContent: 'center',
   padding: '48px',
   gap: '16px',
+  position: 'relative',
+  zIndex: 1,
   '@media (max-width: 768px)': {
     width: '100%',
     padding: '40px 24px',
@@ -68,6 +86,9 @@ const ImagePane = styled('div')({
   maxWidth: '600px',
   borderRadius: '5px',
   overflow: 'hidden',
+  position: 'relative',
+  zIndex: 1,
+  flexShrink: 0,
   '& img': {
     width: '100%',
     height: '100%',

@@ -69,7 +69,7 @@ export default function PageHero({ title, subtitle, imageSrc, imageAlt = '' }: P
 }
 
 const HeroSection = styled('section')({
-  height: '60vh',
+  height: '40vh',
   width: '100%',
   position: 'relative',
   display: 'flex',
