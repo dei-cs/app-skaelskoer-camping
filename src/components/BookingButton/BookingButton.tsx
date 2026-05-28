@@ -5,14 +5,15 @@ import { styled } from '@mui/material/styles';
 export default function BookingButton() {
 
     return (
-        <StyledBookingButton 
-            startIcon={<CalendarMonthIcon />} 
-            href="#booking"
-            variant='contained'
-            color='primary'
-        >
-            Booking
-        </StyledBookingButton>
+        <a href="https://booking.camping.care/skalskor-camping" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <StyledBookingButton
+                startIcon={<CalendarMonthIcon />}
+                variant='contained'
+                color='primary'
+            >
+                Booking
+            </StyledBookingButton>
+        </a>
     );
 };
 
