@@ -7,10 +7,10 @@ export default function PhoneButton() {
     return (
         <StyledPhoneButton
             startIcon={<PhoneIcon />}
-            href="tel:56891234"
+            href="tel:+4558194384"
             variant='outlined'
         >
-            56 89 12 34
+            +45 58 19 43 84
         </StyledPhoneButton>
     );
 };
@@ -28,6 +28,6 @@ const StyledPhoneButton = styled(Button)(({ theme }) => ({
         color: theme.palette.primary.dark,
         borderColor: theme.palette.primary.dark,
         borderWidth: '2px',
-        background: alpha(theme.palette.primary.contrastText, 0.4),
+        background: alpha(theme.palette.primary.contrastText, 0.1),
     },
 }));

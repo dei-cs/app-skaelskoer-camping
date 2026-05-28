@@ -52,16 +52,16 @@ export default function Navbar () {
 
         {/* Right — contact + socials */}
         <Stack direction='row' alignItems='center' gap={2}>
-          <Link href='tel:56891234' sx={linkSx}>
+          <Link href='tel:+4558194384' sx={linkSx}>
             <PhoneIcon sx={{ fontSize: 13 }} />
-            56 89 12 34
+            +45 58 19 43 84
           </Link>
-          <Link href='mailto:mail@skaelskoer-camping.dk' sx={linkSx}>
+          <Link href='mailto:info@solskinscamping.dk' sx={linkSx}>
             <EmailIcon sx={{ fontSize: 13 }} />
-            mail@skaelskoer-camping.dk
+            info@solskinscamping.dk
           </Link>
           <Link
-            href='https://facebook.com'
+            href='https://www.facebook.com/p/Sk%C3%A6lsk%C3%B8r-Nor-Camping-Hytteudlejning-100039831829895/'
             target='_blank'
             rel='noopener noreferrer'
             sx={linkSx}
@@ -69,7 +69,7 @@ export default function Navbar () {
             <FacebookIcon sx={{ fontSize: 16 }} />
           </Link>
           <Link
-            href='https://instagram.com'
+            href='https://www.instagram.com/skaelskornorcamping/'
             target='_blank'
             rel='noopener noreferrer'
             sx={linkSx}
@@ -128,9 +128,11 @@ export default function Navbar () {
             }}
           >
             {[
-              { to: '/overnatning', label: 'Overnatning' },
+              { to: '/', label: 'Forside' },
+              { to: '/kort', label: 'Pladsoversigt & Priser' },
+              // { to: '/overnatning', label: 'Overnatning' },
               // { to: '#faciliteter', label: 'Faciliteter' },
-              { to: '#priser', label: 'Priser' },
+              // { to: '#priser', label: 'Priser' },
               { to: '#praktisk', label: 'Praktisk' },
               { to: '#kontakt', label: 'Kontakt' }
             ].map(({ to, label }) => (

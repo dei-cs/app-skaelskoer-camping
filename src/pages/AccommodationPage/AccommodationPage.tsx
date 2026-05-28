@@ -10,7 +10,6 @@ export default function AccommodationPage() {
       <main>
         <PageHero
           title="Overnatning"
-          subtitle="Find din plads ved vandet"
           imageSrc={heroKilde}
           imageAlt="Campingpladser ved Skælskør Nor"
         />
