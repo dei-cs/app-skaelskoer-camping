@@ -17,6 +17,7 @@ export default function HeroSplit({ title, paragraphs, imageSrc, imageAlt = '', 
   return (
     <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
+        <TextBackground />
         <ImagePane>
           <img src={imageSrc} alt={imageAlt} />
         </ImagePane>
@@ -45,16 +46,34 @@ const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
   minHeight: 480,
+  position: 'relative',
   '@media (max-width: 768px)': {
     flexDirection: 'column',
   },
 })
+
+const TextBackground = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  display: 'flex',
+  top: '-40px',
+  right: 0,
+  width: '65%',
+  height: 'calc(100% + 80px)',
+  backgroundColor: theme.palette.primary.light,
+  zIndex: 0,
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
+}))
 
 const ImagePane = styled('div')({
   width: '50%',
   maxWidth: '600px',
   borderRadius: '15px',
   overflow: 'hidden',
+  position: 'relative',
+  zIndex: 1,
+  flexShrink: 0,
   '& img': {
     width: '100%',
     height: '100%',
@@ -76,6 +95,8 @@ const TextPane = styled('div')({
   justifyContent: 'center',
   padding: '48px',
   gap: '16px',
+  position: 'relative',
+  zIndex: 1,
   '@media (max-width: 768px)': {
     width: '100%',
     padding: '40px 24px',

@@ -36,6 +36,7 @@ export default function LocationSection({
   return (
     <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
+        {/* <TextBackground /> */}
         <MapPane>
           <iframe
             src={mapEmbedSrc}
@@ -122,16 +123,34 @@ const Section = styled(SectionInner)({
   display: 'flex',
   alignItems: 'stretch',
   minHeight: 480,
+  position: 'relative',
   '@media (max-width: 768px)': {
     flexDirection: 'column',
   },
 })
+
+const TextBackground = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  display: 'flex',
+  top: '-40px',
+  right: 0,
+  width: '65%',
+  height: 'calc(100% + 80px)',
+  border: '0.5px solid black',
+  backgroundColor: theme.palette.primary.light,
+  zIndex: 0,
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
+}))
 
 const MapPane = styled('div')({
   width: '50%',
   maxWidth: '600px',
   borderRadius: '5px',
   overflow: 'hidden',
+  position: 'relative',
+  zIndex: 1,
   '& iframe': {
     display: 'block',
   },
@@ -150,6 +169,8 @@ const InfoPane = styled('div')({
   justifyContent: 'center',
   padding: '48px',
   gap: '16px',
+  position: 'relative',
+  zIndex: 1,
   '@media (max-width: 768px)': {
     width: '100%',
     padding: '40px 24px',
@@ -174,5 +195,5 @@ const HoursRow = styled('div')({
   flexDirection: 'row',
   justifyContent: 'space-between',
   gap: '12px',
-  paddingLeft: '28px',
+  // paddingLeft: '28px',
 })
