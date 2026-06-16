@@ -6,8 +6,6 @@ import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
 import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
 
-const TITLE = 'Priser'
-
 interface PriceEntry {
   label: string
   price: string
@@ -40,7 +38,7 @@ const PRICE_CATEGORIES: PriceCategory[] = [
     heading: 'Campingvogn',
     entries: [
       { label: 'Plads 1-28', price: '180 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 29-68', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
+      { label: 'Plads 29-57', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
       { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
       { label: 'Hund', price: '20 kr/nat' }
     ]
@@ -48,9 +46,9 @@ const PRICE_CATEGORIES: PriceCategory[] = [
   {
     heading: 'Telt',
     entries: [
+      { label: 'Plads 1-28', price: '180 kr/nat', note: 'Inkl. 1 person og strøm' },
+      { label: 'Plads 29-57', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
       { label: 'Plads 69-72', price: '125 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 1-7', price: '165 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 40-57', price: '225 kr/nat', note: 'Inkl. 1 person og strøm' },
       { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
       { label: 'Hund', price: '20 kr/nat' }
     ]
@@ -60,7 +58,7 @@ const PRICE_CATEGORIES: PriceCategory[] = [
     entries: [
       { label: 'Hytte', price: '495 kr/nat', note: 'Inkl. 1 person og strøm' },
       { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
-      { label: 'Hund p. ophold', price: '200 kr' }
+      { label: 'Hund pr. ophold', price: '200 kr' }
     ]
   },
   {
@@ -74,9 +72,9 @@ const PRICE_CATEGORIES: PriceCategory[] = [
     entries: [
       { label: 'Dagsgæst (kl. 8–23)', price: '30 kr' },
       { label: 'Overnattende gæst', price: '90 kr' },
-      { label: 'Strømpakke 100 (Fastliggere)', price: '100 kr', note: '4,5 kr/kWh · Gyldig i en måned' },
-      { label: 'Strømpakke 250 (Fastliggere)', price: '250 kr', note: '4,5 kr/kWh · Gyldig i en måned' },
-      { label: 'Strømpakke 500 (Fastliggere)', price: '500 kr', note: '4,5 kr/kWh · Gyldig i en måned' },
+      { label: 'Strømpakke 100 (Fastliggere)', price: '100 kr', note: '4,5 kr/kWh' },
+      { label: 'Strømpakke 250 (Fastliggere)', price: '250 kr', note: '4,5 kr/kWh' },
+      { label: 'Strømpakke 500 (Fastliggere)', price: '500 kr', note: '4,5 kr/kWh' },
       { label: 'Bad – 2,5 min.', price: '5 kr' }
     ]
   },

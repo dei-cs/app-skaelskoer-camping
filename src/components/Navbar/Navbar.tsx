@@ -38,7 +38,7 @@ export default function Navbar () {
       <Box
         sx={{
           background: theme.palette.primary.dark,
-          height: 38,
+          height: 35,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
