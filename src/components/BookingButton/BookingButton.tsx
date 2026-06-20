@@ -7,7 +7,7 @@ export default function BookingButton() {
     return (
         <a href="https://booking.camping.care/skalskor-camping" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <StyledBookingButton
-                startIcon={<CalendarMonthIcon />}
+                endIcon={<CalendarMonthIcon />}
                 variant='contained'
                 color='primary'
             >
@@ -22,8 +22,9 @@ const StyledBookingButton = styled(Button)({
     px: 3,
     py: 1.5,
     borderWidth: '2px',
-    fontSize: '20px',
+    fontSize: '16px',
     fontWeight: 700,
     letterSpacing: '0.06em',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    borderRadius: "0"
 });
