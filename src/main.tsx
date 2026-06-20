@@ -35,8 +35,8 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     background: {
-      default: '#f5f0e8',
-      paper: '#ece4d4',
+      default: '#F5F5F5',
+      paper: '#e9e6e2',
     },
     brand: {
       fjord: '#2c5f6e',
