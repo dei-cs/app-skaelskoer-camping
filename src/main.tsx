@@ -4,12 +4,28 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import App from './App.tsx'
 
+declare module '@mui/material/styles' {
+  interface Palette {
+    brand: {
+      fjord: string
+      sand: string
+      sandLight: string
+      ink: string
+      earth: string
+      bark: string
+    }
+  }
+  interface PaletteOptions {
+    brand?: Palette['brand']
+  }
+}
+
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#7DAACB',
+      main: '#6f9f9c',
       light: '#E8DBB3',
-      dark: '#678FB0',
+      dark: '#5a8a87',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -22,23 +38,27 @@ const theme = createTheme({
       default: '#f5f0e8',
       paper: '#ece4d4',
     },
+    brand: {
+      fjord: '#2c5f6e',
+      sand: '#c8b090',
+      sandLight: '#ece4d4',
+      ink: '#08060d',
+      earth: '#5a4f46',
+      bark: '#6b5e52',
+    },
   },
   typography: {
-    fontFamily: "'Barlow', 'Segoe UI', sans-serif",
+    fontFamily: "'Raleway', 'Segoe UI', sans-serif",
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: `
+      styleOverrides: (theme) => `
         :root {
           color-scheme: light;
           font-synthesis: none;
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          --color-sand: #c8b090;
-          --color-sand-light: #ece4d4;
-          --color-fjord: #2c5f6e;
-          --color-driftwood: #8b6f47;
         }
 
         html {
@@ -59,9 +79,9 @@ const theme = createTheme({
         }
 
         h1, h2 {
-          font-family: 'Playfair Display', Georgia, serif;
+          font-family: 'Raleway', Georgia, serif;
           font-weight: 700;
-          color: #08060d;
+          color: ${theme.palette.brand.ink};
         }
 
         h1 {
@@ -88,7 +108,7 @@ const theme = createTheme({
           font-family: ui-monospace, Consolas, monospace;
           display: inline-flex;
           border-radius: 4px;
-          color: #08060d;
+          color: ${theme.palette.brand.ink};
           font-size: 15px;
           line-height: 135%;
           padding: 4px 8px;

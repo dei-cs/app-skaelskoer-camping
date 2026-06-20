@@ -11,7 +11,6 @@ import EmailIcon from '@mui/icons-material/Email'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import BookingButton from '../BookingButton/BookingButton'
-import logoSquare from '../../assets/images/logo-square.webp'
 
 export default function Navbar () {
   const [scrolled, setScrolled] = useState(false)
@@ -69,7 +68,7 @@ export default function Navbar () {
             <FacebookIcon sx={{ fontSize: 16 }} />
           </Link>
           <Link
-            href='https://www.instagram.com/skaelskornorcamping/'
+            href='https://www.instagram.com/skaelskornor/'
             target='_blank'
             rel='noopener noreferrer'
             sx={linkSx}
@@ -93,50 +92,27 @@ export default function Navbar () {
           sx={{
             px: { xs: '16px', md: '40px' },
             py: '4px',
-            minHeight: '68px !important',
+            minHeight: '80px !important',
             position: 'relative',
           }}
         >
-          
-          <RouterLink to='/' style={{ display: 'block', flexShrink: 0 }}>
-          <Box sx={{ width: 200, height: 120, overflow: 'hidden', position: 'relative' }}>
-            <img
-              src={logoSquare}
-              alt='Skælskør Camping Logo'
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                marginTop: '50%',
-                transform: 'translateY(-70%)',
-                filter: scrolled ? 'none' : 'brightness(0) invert(1)',
-                transition: 'filter 0.3s ease',
-              }}
-            />
-          </Box>
-          </RouterLink>
-
           <Stack
             direction='row'
             gap={3.5}
             sx={{
               display: { xs: 'none', sm: 'flex' },
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
             }}
           >
             {[
-              { to: '/', label: 'Forside' },
-              { to: '/kort', label: 'Pladsoversigt & Priser' },
+              { to: '/', label: 'FORSIDE' },
+              { to: '/kort', label: 'PLADSOVERSIGT' },
               // { to: '/overnatning', label: 'Overnatning' },
               // { to: '#faciliteter', label: 'Faciliteter' },
               // { to: '#priser', label: 'Priser' },
-              { to: '#praktisk', label: 'Praktisk' },
-              { to: '#kontakt', label: 'Kontakt' }
+              { to: '/praktisk', label: 'PRAKTISK' },
+              { to: '/kontakt', label: 'KONTAKT' }
             ].map(({ to, label }) => (
-              <NavLink key={to} to={to} $scrolled={scrolled}>
+              <NavLink sx={{ fontWeight: "700" }} key={to} to={to} $scrolled={scrolled}>
                 {label}
               </NavLink>
             ))}
@@ -153,7 +129,8 @@ export default function Navbar () {
 const NavLink = styled(RouterLink, {
   shouldForwardProp: prop => prop !== '$scrolled',
 })<{ $scrolled: boolean }>(({ theme, $scrolled }) => ({
-  color: $scrolled ? theme.palette.primary.main : theme.palette.primary.contrastText,
+  //color: $scrolled ? theme.palette.primary.main : theme.palette.primary.contrastText,
+  color: $scrolled ? "black" : "#fff",
   textDecoration: 'none',
   fontSize: 16,
   fontWeight: 700,
