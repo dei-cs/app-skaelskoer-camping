@@ -44,26 +44,6 @@ export default function PageHero({ title, subtitle, imageSrc, imageAlt = '' }: P
           </Typography>
         )}
       </HeroContent>
-
-      <WaveContainer>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 140"
-          preserveAspectRatio="none"
-          style={{ display: 'block', width: '100%', height: '140px' }}
-        >
-          <defs>
-            <linearGradient id="pageHeroWaveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor={theme.palette.primary.main} stopOpacity={1} />
-              <stop offset="100%" stopColor={theme.palette.background.default} stopOpacity={1} />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,140 L0,140 Z"
-            fill="url(#pageHeroWaveGradient)"
-          />
-        </svg>
-      </WaveContainer>
     </HeroSection>
   )
 }
@@ -93,13 +73,4 @@ const HeroContent = styled('div')({
   zIndex: 1,
   textAlign: 'center',
   padding: '0 24px',
-})
-
-const WaveContainer = styled('div')({
-  position: 'absolute',
-  bottom: -1,
-  left: 0,
-  right: 0,
-  lineHeight: 0,
-  zIndex: 2,
 })

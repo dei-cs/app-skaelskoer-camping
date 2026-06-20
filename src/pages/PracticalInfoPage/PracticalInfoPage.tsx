@@ -3,7 +3,7 @@ import PageHero from '../../components/PageHero/PageHero'
 import RulesetSection from '../../components/RulesetSection/RulesetSection'
 import RentalTermsSection from '../../components/RentalTermsSection/RentalTermsSection'
 import PersonalDataPolicySection from '../../components/PersonalDataPolicySection/PersonalDataPolicySection'
-import heroPraktiskImg from '../../assets/images/hero-kilde.png'
+import heroPraktiskImg from '../../assets/images/decorate-noret.webp'
 
 export default function PracticalInfoPage() {
   return (
