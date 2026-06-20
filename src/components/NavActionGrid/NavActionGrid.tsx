@@ -22,7 +22,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Overnatning', to: '/overnatning', Icon: NightShelterOutlinedIcon },
   { label: 'Priser',      to: '#priser',      Icon: SellOutlinedIcon         },
-  { label: 'Praktisk',   to: '#praktisk',    Icon: ChecklistOutlinedIcon    },
+  { label: 'Praktisk',   to: '/praktisk',    Icon: ChecklistOutlinedIcon    },
   { label: 'Kontakt',    to: '#kontakt',      Icon: MailOutlineIcon          },
 ]
 
