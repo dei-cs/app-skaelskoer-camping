@@ -1,7 +1,8 @@
 import Navbar from '../../components/Navbar/Navbar'
 import PageHero from '../../components/PageHero/PageHero'
 import CampingMapSection from '../../components/CampingMapSection/CampingMapSection'
-import heroImg from '../../assets/images/hero-kilde-huset.webp'
+import PageFooter from '../../components/PageFooter/PageFooter'
+import heroImg from '../../assets/images/decorate-noret.webp'
 
 export default function MapPage() {
   return (
@@ -14,6 +15,7 @@ export default function MapPage() {
           imageAlt="Skælskør Nor Camping"
         />
         <CampingMapSection />
+        <PageFooter />
       </main>
     </>
   )

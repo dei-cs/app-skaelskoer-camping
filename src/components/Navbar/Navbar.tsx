@@ -36,7 +36,7 @@ export default function Navbar () {
     <Box position='fixed' top={0} left={0} right={0} sx={{ zIndex: 1100 }}>
       <Box
         sx={{
-          background: theme.palette.primary.dark,
+          background: theme.palette.brand.fjord,
           height: 35,
           display: 'flex',
           alignItems: 'center',

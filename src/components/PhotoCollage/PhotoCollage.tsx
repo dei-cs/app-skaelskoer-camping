@@ -30,6 +30,7 @@ const CollageWrapper = styled('div')(({ theme }) => ({
   //padding: '10px',
   boxSizing: 'border-box',
   backgroundColor: theme.palette.background.default,
+  marginBottom: "40px"
 }))
 
 const CollageGrid = styled('div')({
