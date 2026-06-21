@@ -49,7 +49,8 @@ export default function PageHero({ title, subtitle, imageSrc, imageAlt = '' }: P
 }
 
 const HeroSection = styled('section')({
-  height: '40vh',
+  minHeight: '30vh',
+  maxHeight: '40vh',
   width: '100%',
   position: 'relative',
   display: 'flex',
