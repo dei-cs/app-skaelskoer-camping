@@ -23,9 +23,9 @@ declare module '@mui/material/styles' {
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#6f9f9c',
+      main: '#5a8a87',
       light: '#E8DBB3',
-      dark: '#5a8a87',
+      dark: '#4c7573',
       contrastText: '#ffffff',
     },
     secondary: {
