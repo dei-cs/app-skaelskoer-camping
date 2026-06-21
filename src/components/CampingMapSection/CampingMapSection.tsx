@@ -1,10 +1,11 @@
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
-import { styled } from '@mui/material/styles'
+import { styled, alpha } from '@mui/material/styles'
 import campingSpotMap from '../../assets/images/camping-spot-map.webp'
 import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
 import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
+import { SectionHeading } from '../InfoSection/InfoSectionElements'
 
 interface PriceEntry {
   label: string
@@ -127,14 +128,14 @@ function EntryRows({ entries }: { entries: PriceEntry[] }) {
       {entries.map((entry, ei) => (
         <PriceRow key={ei}>
           <div>
-            <Typography variant='body1'>{entry.label}</Typography>
+            <Typography variant='body1' sx={{ color: 'brand.earth' }}>{entry.label}</Typography>
             {entry.note && (
-              <Typography variant='body2' color='text.secondary'>
+              <Typography variant='body2' sx={{ color: 'brand.bark' }}>
                 {entry.note}
               </Typography>
             )}
           </div>
-          <Typography variant='body1' color='text.secondary' sx={{ whiteSpace: 'nowrap' }}>
+          <Typography variant='body1' fontWeight={600} sx={{ color: 'brand.fjord', whiteSpace: 'nowrap' }}>
             {entry.price}
           </Typography>
         </PriceRow>
@@ -148,15 +149,15 @@ function CategoryList({ categories, skipFirstDivider = false }: { categories: Pr
     <>
       {categories.map((category, i) => (
         <div key={i}>
-          {(i > 0 || !skipFirstDivider) && <Divider sx={{ my: 1.5 }} />}
+          {(i > 0 || !skipFirstDivider) && <Divider sx={{ my: 1.5, borderColor: 'brand.sand', opacity: 0.5 }} />}
           <PriceGroup>
-            <Typography variant='body1' fontWeight={600}>
+            <Typography variant='body1' fontWeight={600} sx={{ color: 'brand.fjord' }}>
               {category.heading}
             </Typography>
             {category.entries && <EntryRows entries={category.entries} />}
             {category.subsections && category.subsections.map((sub, si) => (
               <SubsectionGroup key={si}>
-                <Typography variant='body2' fontWeight={600} color='text.secondary'>
+                <Typography variant='body2' fontWeight={600} sx={{ color: 'brand.fjord' }}>
                   {sub.subheading}
                 </Typography>
                 <EntryRows entries={sub.entries} />
@@ -182,6 +183,12 @@ export default function CampingMapSection({
     <SectionWrapper backgroundColor={backgroundColor}>
       <Section>
 
+        <SectionHeading
+          eyebrow="Priser & kort"
+          title="Priser og pladskort"
+          intro="Find din plads på kortet og se priserne for telt, campingvogn, autocamper, hytter og fastliggere for sæsonen 2026."
+        />
+
         {/* Top: map (large) + first 3 categories */}
         <TopRow>
           <MapPane>
@@ -193,7 +200,7 @@ export default function CampingMapSection({
           </TopPrices>
         </TopRow>
 
-        <Divider sx={{ my: 2 }} />
+        <Divider sx={{ my: 2, borderColor: 'brand.sand', opacity: 0.5 }} />
 
         {/* Bottom: remaining categories in two equal columns */}
         <BottomRow>
@@ -245,11 +252,13 @@ const MapPane = styled('div')(({ theme }) => ({
   borderRadius: '20px',
   overflow: 'hidden',
   background: theme.palette.background.paper,
+  border: `1px solid ${alpha(theme.palette.brand.sand, 0.5)}`,
   '& img': {
     width: '100%',
     height: '100%',
     objectFit: 'contain',
-    display: 'block'
+    display: 'block',
+    filter: 'grayscale(0.05) brightness(0.95) contrast(0.85)',
   },
   '@media (max-width: 900px)': {
     flex: 'unset',
@@ -288,16 +297,16 @@ const HalfColumn = styled('div')({
   minWidth: 0,
 })
 
-const ColumnDivider = styled('div')({
+const ColumnDivider = styled('div')(({ theme }) => ({
   width: '1px',
   alignSelf: 'stretch',
-  background: 'rgba(0,0,0,0.08)',
+  background: alpha(theme.palette.brand.sand, 0.5),
   margin: '0 40px',
   flexShrink: 0,
   '@media (max-width: 900px)': {
     display: 'none',
   }
-})
+}))
 
 const PriceGroup = styled('div')({
   display: 'flex',
@@ -305,15 +314,14 @@ const PriceGroup = styled('div')({
   gap: '8px'
 })
 
-const SubsectionGroup = styled('div')({
+const SubsectionGroup = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '6px',
   paddingLeft: '12px',
-  // borderLeft: '2px solid',
-  borderColor: 'rgba(0,0,0,0.08)',
+  borderLeft: `2px solid ${alpha(theme.palette.brand.sand, 0.5)}`,
   marginTop: '4px'
-})
+}))
 
 const PriceRow = styled('div')({
   display: 'flex',
