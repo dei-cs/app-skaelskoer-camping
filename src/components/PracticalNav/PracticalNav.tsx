@@ -238,6 +238,7 @@ const StepperWrapper = styled('nav')(({ theme }) => ({
   background: alpha(theme.palette.background.default, 0.97),
   backdropFilter: 'blur(8px)',
   borderBottom: `1px solid ${alpha(theme.palette.brand.sand, 0.5)}`,
+  // Shown on phones and tablets; replaced by the vertical rail on wide screens.
   '@media (min-width: 1620px)': { display: 'none' },
 }))
 

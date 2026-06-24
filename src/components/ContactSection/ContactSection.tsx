@@ -127,10 +127,12 @@ export default function ContactSection() {
                 <Typography
                   component="span"
                   sx={(theme) => ({
-                    fontSize: '18px',
+                    fontSize: { xs: '16px', md: '18px' },
                     fontWeight: 600,
                     lineHeight: 1.4,
                     color: theme.palette.brand.ink,
+                    // Break long values (e.g. the email) instead of overflowing.
+                    overflowWrap: 'break-word',
                   })}
                 >
                   {value}
@@ -184,13 +186,20 @@ export default function ContactSection() {
                           }),
                     }}
                   >
-                    <Typography component="span" sx={{ fontSize: '15px', lineHeight: 1.5 }}>
+                    <Typography
+                      component="span"
+                      sx={{ fontSize: { xs: '14px', md: '15px' }, lineHeight: 1.5 }}
+                    >
                       {entry.label}
                     </Typography>
                     {entry.hours && (
                       <Typography
                         component="span"
-                        sx={{ fontSize: '14px', whiteSpace: 'nowrap', opacity: 0.85 }}
+                        sx={{
+                          fontSize: { xs: '13px', md: '14px' },
+                          textAlign: 'right',
+                          opacity: 0.85,
+                        }}
                       >
                         {entry.hours}
                       </Typography>

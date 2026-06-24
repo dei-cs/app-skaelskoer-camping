@@ -8,6 +8,7 @@ import Link from '@mui/material/Link'
 import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton'
 import Divider from '@mui/material/Divider'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import { styled, alpha, useTheme } from '@mui/material/styles'
 import type { Theme } from '@mui/material/styles'
 import PhoneIcon from '@mui/icons-material/Phone'
@@ -39,6 +40,13 @@ export default function Navbar () {
   const [open, setOpen] = useState(false)
   const theme = useTheme()
   const { pathname } = useLocation()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+
+  // Mobile/tablet: navbar always solid + pushes content down.
+  // Exception — landing page keeps the transparent overlay (it has a hero).
+  const isLanding = pathname === '/'
+  const forceSolid = isMobile && !isLanding
+  const solid = scrolled || forceSolid
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60)
@@ -57,6 +65,7 @@ export default function Navbar () {
   }
 
   return (
+    <>
     <Box position='fixed' top={0} left={0} right={0} sx={{ zIndex: 1100 }}>
       <Box
         sx={{
@@ -99,9 +108,9 @@ export default function Navbar () {
         position='static'
         elevation={0}
         sx={{
-          background: scrolled ? alpha(theme.palette.background.default, 0.97) : 'transparent',
-          backdropFilter: scrolled ? 'blur(8px)' : 'none',
-          boxShadow: scrolled ? '0 1px 8px rgba(0,0,0,0.1)' : 'none',
+          background: solid ? alpha(theme.palette.background.default, 0.97) : 'transparent',
+          backdropFilter: solid ? 'blur(8px)' : 'none',
+          boxShadow: solid ? '0 1px 8px rgba(0,0,0,0.1)' : 'none',
           transition: 'background 0.3s ease, box-shadow 0.3s ease'
         }}
       >
@@ -122,8 +131,8 @@ export default function Navbar () {
               display: { xs: 'inline-flex', md: 'none' },
               mr: 1,
               ml: -1,
-              color: scrolled ? 'black' : '#fff',
-              textShadow: scrolled ? 'none' : '0 1px 4px rgba(0,0,0,0.4)',
+              color: solid ? 'black' : '#fff',
+              textShadow: solid ? 'none' : '0 1px 4px rgba(0,0,0,0.4)',
             }}
           >
             <MenuIcon />
@@ -213,6 +222,9 @@ export default function Navbar () {
         </DrawerInner>
       </Drawer>
     </Box>
+    {/* In-flow spacer pushes content below the solid navbar (mobile/tablet, non-landing) */}
+    {forceSolid && <Box sx={{ height: 115 }} aria-hidden='true' />}
+    </>
   )
 }
 
