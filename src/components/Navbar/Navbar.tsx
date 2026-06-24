@@ -128,7 +128,7 @@ export default function Navbar () {
 
 const NavLink = styled(RouterLink, {
   shouldForwardProp: prop => prop !== '$scrolled',
-})<{ $scrolled: boolean }>(({ theme, $scrolled }) => ({
+})<{ $scrolled: boolean }>(({ $scrolled }) => ({
   //color: $scrolled ? theme.palette.primary.main : theme.palette.primary.contrastText,
   color: $scrolled ? "black" : "#fff",
   textDecoration: 'none',

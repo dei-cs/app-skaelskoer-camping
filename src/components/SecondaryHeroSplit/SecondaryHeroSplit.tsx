@@ -52,19 +52,19 @@ const Section = styled(SectionInner)({
   },
 })
 
-const TextBackground = styled('div')(({ theme }) => ({
-  position: 'absolute',
-  display: 'flex',
-  width: '65%',
-  height: 'calc(100% + 80px)',
-  top: '-40px', 
-  border: '0.5px solid black',
-  backgroundColor: theme.palette.primary.light,
-  zIndex: 0,
-  '@media (max-width: 768px)': {
-    display: 'none',
-  },
-}))
+// const TextBackground = styled('div')(({ theme }) => ({
+//   position: 'absolute',
+//   display: 'flex',
+//   width: '65%',
+//   height: 'calc(100% + 80px)',
+//   top: '-40px', 
+//   border: '0.5px solid black',
+//   backgroundColor: theme.palette.primary.light,
+//   zIndex: 0,
+//   '@media (max-width: 768px)': {
+//     display: 'none',
+//   },
+// }))
 
 const TextPane = styled('div')({
   width: '50%',
