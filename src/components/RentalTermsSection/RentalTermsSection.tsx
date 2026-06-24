@@ -6,14 +6,6 @@ import {
   SubHeading
 } from '../InfoSection/InfoSectionElements'
 
-const rentalCategories = [
-  {
-    title: 'Generelt',
-    content:
-      'Solskinscamping indestår for rigtigheden af ovenstående beskrivelse af det udlejede. Ved fejl og mangler skal vi informeres hurtigst muligt efter ankomst, således, at vi kan drage omsorg herfor.\n\nVi påtager os intet ansvar for pludseligt opståede skader, men vil drage omsorg for, at skaden udbedres hurtigst muligt efter anmeldelsen.\n\nVed fraflytning skal såvel hytter og pladser og inventaret i disse afleveres i samme ryddelige stand som ved overtagelsen. Evt. nødvendig ekstrarengøring vil kunne foretages for lejers regning, hvis denne ikke har indhentet udlejers godkendelse inden afrejsen.'
-  }
-]
-
 const saleCategories = [
   {
     title: 'Booking og Betaling',
