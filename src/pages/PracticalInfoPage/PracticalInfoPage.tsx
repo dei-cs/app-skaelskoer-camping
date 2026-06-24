@@ -4,6 +4,7 @@ import RulesetSection from '../../components/RulesetSection/RulesetSection'
 import RentalTermsSection from '../../components/RentalTermsSection/RentalTermsSection'
 import PersonalDataPolicySection from '../../components/PersonalDataPolicySection/PersonalDataPolicySection'
 import PageFooter from '../../components/PageFooter/PageFooter'
+import PracticalNav from '../../components/PracticalNav/PracticalNav'
 import heroPraktiskImg from '../../assets/images/decorate-noret.webp'
 
 export default function PracticalInfoPage() {
@@ -16,6 +17,7 @@ export default function PracticalInfoPage() {
           imageSrc={heroPraktiskImg}
           imageAlt="Campingplads ved kilde"
         />
+        <PracticalNav />
         <RulesetSection />
         <RentalTermsSection />
         <PersonalDataPolicySection />
