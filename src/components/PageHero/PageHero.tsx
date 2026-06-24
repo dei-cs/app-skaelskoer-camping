@@ -48,7 +48,7 @@ export default function PageHero({ title, subtitle, imageSrc, imageAlt = '' }: P
   )
 }
 
-const HeroSection = styled('section')({
+const HeroSection = styled('section')(({ theme }) => ({
   minHeight: '30vh',
   maxHeight: '40vh',
   width: '100%',
@@ -57,7 +57,11 @@ const HeroSection = styled('section')({
   alignItems: 'center',
   justifyContent: 'center',
   overflow: 'hidden',
-})
+  // No page hero on tablet/mobile — only landing page keeps a hero
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
+  },
+}))
 
 const ImageBackground = styled('img')({
   position: 'absolute',

@@ -40,9 +40,10 @@ export function SectionHeading({ eyebrow, title, intro }: SectionHeadingProps) {
         sx={(theme) => ({
           fontFamily: "'Raleway', Georgia, serif",
           fontWeight: 700,
-          fontSize: 'clamp(28px, 4.5vw, 48px)',
+          fontSize: 'clamp(22px, 5.5vw, 48px)',
           letterSpacing: '-0.5px',
           lineHeight: 1.1,
+          // Break very long Danish compounds rather than overflow the page.
           color: theme.palette.brand.ink,
           mb: intro ? 3 : 0,
           animation: 'infoFadeUp 0.6s ease both',
@@ -82,10 +83,15 @@ export function SubHeading({ children }: SubHeadingProps) {
         sx={(theme) => ({
           fontFamily: "'Raleway', sans-serif",
           fontWeight: 700,
-          fontSize: 'clamp(18px, 3vw, 22px)',
+          // Smaller floor so long single words (e.g. "leveringsbetingelser")
+          // fit narrow phones without overflowing the page.
+          fontSize: 'clamp(15px, 4vw, 22px)',
           letterSpacing: '0.2px',
           color: theme.palette.brand.fjord,
-          whiteSpace: 'nowrap',
+          // Phones: let long headings wrap instead of overflowing the page
+          // (the overflow shifts the fixed navbar off-screen). Keep on one
+          // line from sm up, where the divider sits beside it.
+          whiteSpace: { xs: 'normal', sm: 'nowrap' },
         })}
       >
         {children}
