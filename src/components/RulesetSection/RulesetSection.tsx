@@ -57,7 +57,7 @@ const ruleCategories = [
 
 export default function RulesetSection() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="reglement">
       <SectionInner sx={{ px: { xs: '24px', md: '32px' } }}>
         <SectionHeading
           eyebrow="Godt at vide"
