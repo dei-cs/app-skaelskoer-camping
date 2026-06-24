@@ -42,6 +42,7 @@ const CollageGrid = styled('div')({
   '@media (max-width: 768px)': {
     gridTemplateColumns: '1fr',
     gridTemplateRows: 'auto',
+    gap: '16px',
   },
 })
 
