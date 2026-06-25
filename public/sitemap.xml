@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://solskinscamping.dk/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://solskinscamping.dk/kort</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solskinscamping.dk/praktisk</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solskinscamping.dk/kontakt</loc>
+    <lastmod>2026-06-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
