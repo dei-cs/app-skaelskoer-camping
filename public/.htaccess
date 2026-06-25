@@ -1,0 +1,52 @@
+# ============================================================
+# Skælskør Nor Camping — Apache config for SPA + SEO migration
+# ============================================================
+
+RewriteEngine On
+
+# --- 1. Force HTTPS + non-www (canonical host) ---
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://solskinscamping.dk%{REQUEST_URI} [R=301,L]
+
+# --- 2. 301 redirects: old WordPress path -> new page ---
+RewriteRule ^om-skaelskoer-nor-camping/?$        /          [R=301,L]
+RewriteRule ^priser-2024/?$                      /kort  [R=301,L]
+RewriteRule ^pladsoversigt/?$                    /kort      [R=301,L]
+RewriteRule ^pladsen-i-dag/?$                    /kort      [R=301,L]
+RewriteRule ^kontakt-os/?$                       /kontakt   [R=301,L]
+RewriteRule ^persondatapolitik/?$                /praktisk  [R=301,L]
+RewriteRule ^leje-og-handelsbetingelser/?$       /praktisk  [R=301,L]
+RewriteRule ^reglement/?$                        /praktisk  [R=301,L]
+RewriteRule ^vaerd-at-vide/?$                     /praktisk  [R=301,L]
+RewriteRule ^faciliteter/?$                       /praktisk  [R=301,L]
+RewriteRule ^ny-hjemmeside/?$                     /          [R=301,L]
+
+# Pattern sweeps for the random long tail:
+RewriteRule ^produkter(/.*)?$                     /kort      [R=301,L]   # all hytter/ferielejlighed
+RewriteRule ^en(/.*)?$                            /          [R=301,L]   # english site removed
+
+# --- 3. 410 Gone: old WordPress junk + leftover sitemaps ---
+# Google drops 410 faster than a 404. These fire even if the file
+# still physically exists (so the old Yoast sitemap dies immediately).
+RewriteRule ^sitemap_index\.xml$   - [G,L]
+RewriteRule ^.*-sitemap\.xml$      - [G,L]
+RewriteRule ^sitemap-.*\.xml$      - [G,L]
+RewriteRule ^wp-admin(/.*)?$       - [G,L]
+RewriteRule ^wp-content(/.*)?$     - [G,L]
+RewriteRule ^wp-includes(/.*)?$    - [G,L]
+RewriteRule ^wp-login\.php$        - [G,L]
+RewriteRule ^xmlrpc\.php$          - [G,L]
+
+# --- 4. Serve real files (assets, favicon, robots.txt, sitemap.xml) ---
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --- 5. Known SPA routes -> index.html (200 OK) ---
+# ADD any new app route here when you create one, else it 410s below.
+RewriteRule ^(kort|praktisk|kontakt)/?$   index.html [L]
+
+# --- 6. Everything else = removed WP page -> 410 Gone ---
+# Stops the SPA from returning soft-404 (200) for 400+ dead URLs.
+RewriteRule ^ - [G]
