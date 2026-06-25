@@ -19,7 +19,7 @@ export const FOOTER_CONTENT = {
   instagram: 'https://www.instagram.com/skaelskornor/',
   navLinks: [
     { to: '/', label: 'Forside' },
-    { to: '/kort', label: 'Pladsoversigt' },
+    { to: '/priser', label: 'Priser' },
     { to: '/praktisk', label: 'Praktisk' },
     { to: '/kontakt', label: 'Kontakt' },
   ] as NavLinkEntry[],

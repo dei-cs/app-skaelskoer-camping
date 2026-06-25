@@ -63,19 +63,26 @@ const PRICE_CATEGORIES: PriceCategory[] = [
     ]
   },
   {
-    heading: 'Ferielejligheder',
+    heading: 'Glamping telt',
     entries: [
-      { label: 'Ferielejlighed inkl. 1 person, strøm og rengøring', price: '595 kr' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr', note: 'Børn 0-11 år er gratis' },    ]
+      { label: 'Glamping telt (Plads 58)', price: '895 kr/nat', note: 'Inkl. 1 person og strøm' },
+      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' }
+    ]
   },
+  // {
+  //   heading: 'Ferielejligheder',
+  //   entries: [
+  //     { label: 'Ferielejlighed inkl. 1 person, strøm og rengøring', price: '595 kr' },
+  //     { label: 'Ekstra overnattende gæst', price: '90 kr', note: 'Børn 0-11 år er gratis' },    ]
+  // },
   {
     heading: 'Andet',
     entries: [
       { label: 'Dagsgæst (kl. 8–23)', price: '30 kr' },
       { label: 'Overnattende gæst', price: '90 kr' },
-      { label: 'Strømpakke 100 (Fastliggere)', price: '100 kr', note: '4,5 kr/kWh' },
-      { label: 'Strømpakke 250 (Fastliggere)', price: '250 kr', note: '4,5 kr/kWh' },
-      { label: 'Strømpakke 500 (Fastliggere)', price: '500 kr', note: '4,5 kr/kWh' },
+      { label: 'Strømpakke 100 (Fastliggere)', price: '100 kr', note: '6,5 kr/kWh' },
+      { label: 'Strømpakke 250 (Fastliggere)', price: '250 kr', note: '6,5 kr/kWh' },
+      { label: 'Strømpakke 500 (Fastliggere)', price: '500 kr', note: '6,5 kr/kWh' },
       { label: 'Bad – 2,5 min.', price: '5 kr' }
     ]
   },
@@ -176,8 +183,8 @@ export default function CampingMapSection({
 }: CampingMapSectionProps) {
   const topCategories = PRICE_CATEGORIES.slice(0, TOP_COUNT)
   const bottomCategories = PRICE_CATEGORIES.slice(TOP_COUNT)
-  const bottomLeft = bottomCategories.slice(0, 3)   // Hytte, Ferielejligheder, Andet
-  const bottomRight = bottomCategories.slice(3)      // Fastligger-pladser
+  const bottomLeft = bottomCategories.slice(0, 3)   // Hytte, Glamping, Ferielejligheder, Andet
+  const bottomRight = bottomCategories.slice(3, 6)      // Fastligger-pladser
 
   return (
     <SectionWrapper backgroundColor={backgroundColor}>

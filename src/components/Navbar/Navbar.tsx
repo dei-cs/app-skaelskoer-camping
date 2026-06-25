@@ -22,7 +22,7 @@ import logoBadge from '../../assets/images/logo-badge.webp'
 
 const NAV_ITEMS = [
   { to: '/', label: 'FORSIDE' },
-  { to: '/kort', label: 'PLADSOVERSIGT' },
+  { to: '/priser', label: 'PRISER' },
   // { to: '/overnatning', label: 'Overnatning' },
   // { to: '#faciliteter', label: 'Faciliteter' },
   // { to: '#priser', label: 'Priser' },
