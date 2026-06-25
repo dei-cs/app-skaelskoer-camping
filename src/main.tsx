@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import App from './App.tsx'
+import './i18n'
 
 declare module '@mui/material/styles' {
   interface Palette {

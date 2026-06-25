@@ -1,124 +1,13 @@
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import { useTranslation } from 'react-i18next'
 import { styled, alpha } from '@mui/material/styles'
 import campingSpotMap from '../../assets/images/camping-spot-map.webp'
 import BookingButton from '../BookingButton/BookingButton'
 import PhoneButton from '../PhoneButton/PhoneButton'
 import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
 import { SectionHeading } from '../InfoSection/InfoSectionElements'
-
-interface PriceEntry {
-  label: string
-  price: string
-  note?: string
-}
-
-interface PriceSubsection {
-  subheading: string
-  entries: PriceEntry[]
-}
-
-interface PriceCategory {
-  heading: string
-  entries?: PriceEntry[]
-  subsections?: PriceSubsection[]
-}
-
-const PRICE_CATEGORIES: PriceCategory[] = [
-  {
-    heading: 'Autocamper',
-    entries: [
-      { label: 'Plads A-D', price: '140 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 1-28', price: '180 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 29-57', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
-      { label: 'Hund', price: '20 kr/nat' }
-    ]
-  },
-  {
-    heading: 'Campingvogn',
-    entries: [
-      { label: 'Plads 1-28', price: '180 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 29-57', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
-      { label: 'Hund', price: '20 kr/nat' }
-    ]
-  },
-  {
-    heading: 'Telt',
-    entries: [
-      { label: 'Plads 1-28', price: '180 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 29-57', price: '240 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Plads 69-72', price: '125 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
-      { label: 'Hund', price: '20 kr/nat' }
-    ]
-  },
-  {
-    heading: 'Hytte',
-    entries: [
-      { label: 'Hytte', price: '495 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' },
-      { label: 'Hund pr. ophold', price: '200 kr' }
-    ]
-  },
-  {
-    heading: 'Glamping telt',
-    entries: [
-      { label: 'Glamping telt (Plads 58)', price: '895 kr/nat', note: 'Inkl. 1 person og strøm' },
-      { label: 'Ekstra overnattende gæst', price: '90 kr/nat', note: 'Børn 0-11 år er gratis' }
-    ]
-  },
-  // {
-  //   heading: 'Ferielejligheder',
-  //   entries: [
-  //     { label: 'Ferielejlighed inkl. 1 person, strøm og rengøring', price: '595 kr' },
-  //     { label: 'Ekstra overnattende gæst', price: '90 kr', note: 'Børn 0-11 år er gratis' },    ]
-  // },
-  {
-    heading: 'Andet',
-    entries: [
-      { label: 'Dagsgæst (kl. 8–23)', price: '30 kr' },
-      { label: 'Overnattende gæst', price: '90 kr' },
-      { label: 'Strømpakke 100 (Fastliggere)', price: '100 kr', note: '6,5 kr/kWh' },
-      { label: 'Strømpakke 250 (Fastliggere)', price: '250 kr', note: '6,5 kr/kWh' },
-      { label: 'Strømpakke 500 (Fastliggere)', price: '500 kr', note: '6,5 kr/kWh' },
-      { label: 'Bad – 2,5 min.', price: '5 kr' }
-    ]
-  },
-  {
-    heading: 'Fastligger-pladser',
-    subsections: [
-      {
-        subheading: 'Forårssæson 22/3 – 29/6 2026',
-        entries: [
-          { label: 'Alm. plads', price: '6.450 kr' },
-          { label: 'Vandplads 29-49', price: '6.750 kr' },
-          { label: 'El-tilslutning', price: '175 kr' },
-          { label: 'Hund', price: '150 kr' }
-        ]
-      },
-      {
-        subheading: 'Helsæson 22/3 – 4/10 2026',
-        entries: [
-          { label: 'Alm. plads', price: '11.400 kr' },
-          { label: 'Vandplads 29-49', price: '12.200 kr' },
-          { label: 'El-tilslutning', price: '175 kr' },
-          { label: 'Hund', price: '300 kr' }
-        ]
-      },
-      {
-        subheading: 'Efterårssæson 28/7 – 4/10 2026',
-        entries: [
-          { label: 'Alm. plads', price: '4.150 kr' },
-          { label: 'Vandplads 29-49', price: '4.450 kr' },
-          { label: 'El-tilslutning', price: '175 kr' },
-          { label: 'Hund', price: '150 kr' }
-        ]
-      }
-    ]
-  },
-]
+import type { PriceEntry, PriceCategory } from '../../i18n/types'
 
 // Top row: map + first 3 categories alongside
 // Bottom row: remaining categories in two 50/50 columns
@@ -181,8 +70,10 @@ export default function CampingMapSection({
   backgroundColor = 'default',
   showActions = false
 }: CampingMapSectionProps) {
-  const topCategories = PRICE_CATEGORIES.slice(0, TOP_COUNT)
-  const bottomCategories = PRICE_CATEGORIES.slice(TOP_COUNT)
+  const { t } = useTranslation()
+  const categories = t('prices.categories', { returnObjects: true }) as PriceCategory[]
+  const topCategories = categories.slice(0, TOP_COUNT)
+  const bottomCategories = categories.slice(TOP_COUNT)
   const bottomLeft = bottomCategories.slice(0, 3)   // Hytte, Glamping, Ferielejligheder, Andet
   const bottomRight = bottomCategories.slice(3, 6)      // Fastligger-pladser
 
@@ -191,15 +82,15 @@ export default function CampingMapSection({
       <Section>
 
         <SectionHeading
-          eyebrow="Priser & kort"
-          title="Priser og pladskort"
-          intro="Find din plads på kortet og se priserne for telt, campingvogn, autocamper, hytter og fastliggere for sæsonen 2026."
+          eyebrow={t('prices.eyebrow')}
+          title={t('prices.title')}
+          intro={t('prices.intro')}
         />
 
         {/* Top: map (large) + first 3 categories */}
         <TopRow>
           <MapPane>
-            <img src={campingSpotMap} alt='Kort over campingpladsen' />
+            <img src={campingSpotMap} alt={t('prices.mapAlt')} />
           </MapPane>
           <TopPrices>
             {/* <Typography variant='h4' sx={{ mb: 1 }}>{TITLE}</Typography> */}

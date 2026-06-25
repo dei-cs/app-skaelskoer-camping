@@ -1,6 +1,7 @@
 import Typography from '@mui/material/Typography'
 import { styled, alpha } from '@mui/material/styles'
 import { Link as RouterLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -9,9 +10,12 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import NorthIcon from '@mui/icons-material/North'
 import logoBadge from '../../assets/images/logo-badge.webp'
 import { FOOTER_CONTENT as SITE } from './footerContent'
+import type { OpeningHourEntry } from './footerContent'
 
 export default function PageFooter() {
-  const { phone, email, address, navLinks, openingHours } = SITE
+  const { t } = useTranslation()
+  const { phone, email, address, navLinks } = SITE
+  const openingHours = t('footer.openingHours', { returnObjects: true }) as OpeningHourEntry[]
   const year = new Date().getFullYear()
 
   const toTop = () =>
@@ -25,13 +29,13 @@ export default function PageFooter() {
           <Brand>
             <BrandLogo src={logoBadge} alt={SITE.name} />
             <BrandName>{SITE.name}</BrandName>
-            <Tagline>{SITE.tagline}</Tagline>
+            <Tagline>{t('footer.tagline')}</Tagline>
             <Socials>
               <SocialLink
                 href={SITE.facebook}
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Skælskør Nor Camping på Facebook'
+                aria-label={t('footer.facebookAria')}
               >
                 <FacebookIcon sx={{ fontSize: 18 }} />
               </SocialLink>
@@ -39,7 +43,7 @@ export default function PageFooter() {
                 href={SITE.instagram}
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Skælskør Nor Camping på Instagram'
+                aria-label={t('footer.instagramAria')}
               >
                 <InstagramIcon sx={{ fontSize: 18 }} />
               </SocialLink>
@@ -48,17 +52,17 @@ export default function PageFooter() {
 
           {/* Navigation */}
           <Column>
-            <Eyebrow>Navigation</Eyebrow>
-            {navLinks.map(({ to, label }) => (
+            <Eyebrow>{t('footer.navigationHeading')}</Eyebrow>
+            {navLinks.map(({ to, key }) => (
               <NavItem key={to} to={to}>
-                {label}
+                {t(`footer.nav.${key}`)}
               </NavItem>
             ))}
           </Column>
 
           {/* Contact */}
           <Column>
-            <Eyebrow>Kontakt</Eyebrow>
+            <Eyebrow>{t('footer.contactHeading')}</Eyebrow>
             <ContactRow>
               <LocationOnIcon sx={{ fontSize: 16, mt: '2px', color: 'inherit' }} />
               <span>{address}</span>
@@ -79,7 +83,7 @@ export default function PageFooter() {
 
           {/* Opening hours */}
           <Column>
-            <Eyebrow>Åbningstider</Eyebrow>
+            <Eyebrow>{t('footer.openingHoursHeading')}</Eyebrow>
             {openingHours.map((entry, i) => (
               <HoursRow key={i} $heading={!entry.hours}>
                 <span>{entry.label}</span>
@@ -96,7 +100,7 @@ export default function PageFooter() {
             © {year} {SITE.name}
           </Typography>
           <ToTop type='button' onClick={toTop}>
-            Til toppen
+            {t('common.backToTop')}
             <NorthIcon sx={{ fontSize: 14 }} />
           </ToTop>
         </BottomBar>

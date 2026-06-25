@@ -1,24 +1,26 @@
 import { styled } from '@mui/material/styles'
+import { useTranslation } from 'react-i18next'
 import DecorateGlamping from '../../assets/images/decorate-glamping.webp'
 import DecorateKildehuset from '../../assets/images/decorate-kildehuset.webp'
 import DecorateNoret from '../../assets/images/decorate-noret.webp'
 import DecorateHytter from '../../assets/images/decorate-hytter.webp'
 
 export default function PhotoCollage () {
+  const { t } = useTranslation()
   return (
     <CollageWrapper>
       <CollageGrid>
         <CollageCell sx={{ gridColumn: '1 / 4' }}>
-          <CollageImage src={DecorateHytter} alt="Camping vista" />
+          <CollageImage src={DecorateHytter} alt={t('photoCollage.alt1')} />
         </CollageCell>
         <CollageCell sx={{ gridColumn: '4 / 11' }}>
-          <CollageImage src={DecorateGlamping} alt="Kilde House" />
+          <CollageImage src={DecorateGlamping} alt={t('photoCollage.alt2')} />
         </CollageCell>
         <CollageCell sx={{ gridColumn: '1 / 8' }}>
-          <CollageImage src={DecorateNoret} alt="Hero landscape" />
+          <CollageImage src={DecorateNoret} alt={t('photoCollage.alt3')} />
         </CollageCell>
         <CollageCell sx={{ gridColumn: '8 / 11' }}>
-          <CollageImage src={DecorateKildehuset} alt="Cabin accommodation" />
+          <CollageImage src={DecorateKildehuset} alt={t('photoCollage.alt4')} />
         </CollageCell>
       </CollageGrid>
     </CollageWrapper>

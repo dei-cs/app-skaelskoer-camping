@@ -1,13 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { styled, alpha } from '@mui/material/styles'
+import type { PracticalNavSection } from '../../i18n/types'
 
-const sections = [
-  { id: 'reglement', eyebrow: 'Godt at vide', label: 'Reglement' },
-  { id: 'betingelser', eyebrow: 'Det med småt', label: 'Betingelser' },
-  { id: 'persondatapolitik', eyebrow: 'Privatliv', label: 'Persondatapolitik' },
-] as const
-
-const SECTION_IDS: string[] = sections.map((s) => s.id)
+const SECTION_IDS: string[] = ['reglement', 'betingelser', 'persondatapolitik']
 
 const NAVBAR_OFFSET = 115
 const SCROLL_PADDING = 24
@@ -60,14 +56,18 @@ function scrollToSection(event: React.MouseEvent<HTMLAnchorElement>, id: string)
 }
 
 export default function PracticalNav() {
+  const { t } = useTranslation()
   const active = useActiveSection()
   const activeIndex = SECTION_IDS.indexOf(active)
+
+  const labels = t('practicalNav.sections', { returnObjects: true }) as PracticalNavSection[]
+  const sections = SECTION_IDS.map((id, i) => ({ id, ...labels[i] }))
 
   return (
     <>
       <RailWrapper>
-        <RailNav aria-label="Sektioner på siden">
-          <RailHeading>På denne side</RailHeading>
+        <RailNav aria-label={t('practicalNav.sectionsAria')}>
+          <RailHeading>{t('practicalNav.onThisPage')}</RailHeading>
           <RailList>
             {sections.map((section, index) => {
               const isActive = section.id === active
@@ -93,7 +93,7 @@ export default function PracticalNav() {
         </RailNav>
       </RailWrapper>
 
-      <StepperWrapper aria-label="Sektioner på siden">
+      <StepperWrapper aria-label={t('practicalNav.sectionsAria')}>
         <StepperInner>
           {sections.map((section) => {
             const isActive = section.id === active

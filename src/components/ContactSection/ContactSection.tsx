@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -7,6 +8,7 @@ import type { SvgIconComponent } from '@mui/icons-material'
 import { SectionInner, SectionWrapper } from '../SectionWrapper/SectionWrapper'
 import { SectionHeading } from '../InfoSection/InfoSectionElements'
 import { FOOTER_CONTENT as SITE } from '../PageFooter/footerContent'
+import type { OpeningHourEntry } from '../PageFooter/footerContent'
 
 interface ContactCard {
   icon: SvgIconComponent
@@ -17,7 +19,9 @@ interface ContactCard {
 }
 
 export default function ContactSection() {
-  const { phone, email, address, openingHours } = SITE
+  const { t } = useTranslation()
+  const { phone, email, address } = SITE
+  const openingHours = t('footer.openingHours', { returnObjects: true }) as OpeningHourEntry[]
   const mapsQuery = encodeURIComponent(`${SITE.name}, ${address}`)
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`
   const mapsEmbed = `https://www.google.com/maps?q=${mapsQuery}&output=embed`
@@ -25,19 +29,19 @@ export default function ContactSection() {
   const cards: ContactCard[] = [
     {
       icon: PhoneIcon,
-      label: 'Ring op',
+      label: t('contactSection.callUp'),
       value: phone,
       href: `tel:${phone.replace(/\s/g, '')}`,
     },
     {
       icon: EmailIcon,
-      label: 'Skriv til os',
+      label: t('contactSection.writeUs'),
       value: email,
       href: `mailto:${email}`,
     },
     {
       icon: LocationOnIcon,
-      label: 'Besøg os',
+      label: t('contactSection.visitUs'),
       value: address,
       href: mapsLink,
       external: true,
@@ -48,9 +52,9 @@ export default function ContactSection() {
     <SectionWrapper>
       <SectionInner sx={{ px: { xs: '24px', md: '32px' } }}>
         <SectionHeading
-          eyebrow="Kontakt os"
-          title="Kontakt information"
-          intro="Har du spørgsmål om booking, faciliteter eller vejen hertil? Vi kan altid træffes på telefonen, også uden for anviste åbningstider."
+          eyebrow={t('contactSection.eyebrow')}
+          title={t('contactSection.title')}
+          intro={t('contactSection.intro')}
         />
 
         {/* Action cards */}
@@ -167,7 +171,7 @@ export default function ContactSection() {
                   mb: 2.5,
                 })}
               >
-                Åbningstider
+                {t('contactSection.openingHoursHeading')}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.25 }}>
                 {openingHours.map((entry, i) => (
@@ -225,7 +229,7 @@ export default function ContactSection() {
               <Box
                 component="iframe"
                 src={mapsEmbed}
-                title={`Kort over ${SITE.name}, ${address}`}
+                title={`${t('contactSection.mapTitlePrefix')} ${SITE.name}, ${address}`}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
