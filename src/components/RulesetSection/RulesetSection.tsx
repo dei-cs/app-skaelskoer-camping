@@ -51,7 +51,7 @@ const ruleCategories = [
   {
     title: 'El-bil opladning',
     content:
-      'Det er strengt forbudt at oplade sin el-bil på pladsen. Vores installation er ikke dimensioneret til det.',
+      'Det er kun tilladt at oplade på pladsens anførte opladningsplads. Alle øvrige steder er det strengt forbudt at oplade sin el-bil på pladsen. Dette skyldes vores installation ikke er dimensioneret til det.',
   },
 ]
 
