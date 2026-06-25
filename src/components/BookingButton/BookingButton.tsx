@@ -1,8 +1,10 @@
 import Button from '@mui/material/Button'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import { styled } from '@mui/material/styles'
+import { useTranslation } from 'react-i18next'
 
 export default function BookingButton () {
+  const { t } = useTranslation()
   return (
     <a
       href='https://booking.camping.care/skalskor-camping'
@@ -20,7 +22,7 @@ export default function BookingButton () {
           }
         }}
       >
-        Booking
+        {t('common.booking')}
       </StyledBookingButton>
     </a>
   )

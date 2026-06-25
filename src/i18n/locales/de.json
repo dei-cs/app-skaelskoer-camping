@@ -1,0 +1,309 @@
+{
+  "nav": {
+    "home": "STARTSEITE",
+    "prices": "PREISE",
+    "practical": "PRAKTISCHES",
+    "contact": "KONTAKT",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "mainMenu": "Hauptmenü",
+    "contactEyebrow": "Kontakt"
+  },
+  "common": {
+    "booking": "Buchung",
+    "backToTop": "Nach oben"
+  },
+  "meta": {
+    "title": "Skælskør Nor Camping"
+  },
+  "hero": {
+    "logoAlt": "Skælskør Nor Camping"
+  },
+  "footer": {
+    "tagline": "Naturnahes Camping am Nor, mit Fokus auf Ruhe, Frieden und Gemütlichkeit.",
+    "navigationHeading": "Navigation",
+    "contactHeading": "Kontakt",
+    "openingHoursHeading": "Öffnungszeiten",
+    "facebookAria": "Skælskør Nor Camping auf Facebook",
+    "instagramAria": "Skælskør Nor Camping auf Instagram",
+    "nav": {
+      "home": "Startseite",
+      "prices": "Preise",
+      "practical": "Praktisches",
+      "contact": "Kontakt"
+    },
+    "openingHours": [
+      { "label": "Saison (22. März - 4. Oktober)", "hours": "" },
+      { "label": "Montag - Samstag", "hours": "10:00–12:00 & 14:00–16:00" },
+      { "label": "Sonntag", "hours": "09:00–12:00" }
+    ]
+  },
+  "intro": {
+    "eyebrow": "MEHR ALS NUR EINE ÜBERNACHTUNG",
+    "title": "ERLEBEN SIE SKÆLSKØR NOR",
+    "body": "Skælskør Nor Camping ist mehr als eine Übernachtung. Es ist der Ort, an dem das Tempo des Alltags langsamer wird und Natur, Nähe und Gemeinschaft Raum bekommen. Spüren Sie die Brise vom Nor und wachen Sie zum Vogelgesang auf.",
+    "pillars": [
+      { "label": "NATUR & RUHE", "text": "Wald und Wasser nur wenige Schritte von Ihrem Stellplatz entfernt." },
+      { "label": "ÜBERNACHTUNG", "text": "Camping, Zelt, Glamping und gemütliche Hütten." },
+      { "label": "GEMEINSCHAFT", "text": "Eine offene und einladende Gemeinschaft mit Platz für alle." }
+    ]
+  },
+  "prices": {
+    "eyebrow": "Preise & Karte",
+    "title": "Preise und Platzkarte",
+    "intro": "Finden Sie Ihren Stellplatz auf der Karte und sehen Sie die Preise für Zelt, Wohnwagen, Wohnmobil, Hütten und Dauercamper für die Saison 2026.",
+    "mapAlt": "Karte des Campingplatzes",
+    "categories": [
+      {
+        "heading": "Wohnmobil",
+        "entries": [
+          { "label": "Platz A-D", "price": "140 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Platz 1-28", "price": "180 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Platz 29-57", "price": "240 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Hund", "price": "20 DKK/Nacht" }
+        ]
+      },
+      {
+        "heading": "Wohnwagen",
+        "entries": [
+          { "label": "Platz 1-28", "price": "180 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Platz 29-57", "price": "240 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Hund", "price": "20 DKK/Nacht" }
+        ]
+      },
+      {
+        "heading": "Zelt",
+        "entries": [
+          { "label": "Platz 1-28", "price": "180 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Platz 29-57", "price": "240 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Platz 69-72", "price": "125 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Hund", "price": "20 DKK/Nacht" }
+        ]
+      },
+      {
+        "heading": "Hütte",
+        "entries": [
+          { "label": "Hütte", "price": "495 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Hund pro Aufenthalt", "price": "200 DKK" }
+        ]
+      },
+      {
+        "heading": "Glamping-Zelt",
+        "entries": [
+          { "label": "Glamping-Zelt (Platz 58)", "price": "895 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" }
+        ]
+      },
+      {
+        "heading": "Sonstiges",
+        "entries": [
+          { "label": "Tagesgast (8–23 Uhr)", "price": "30 DKK" },
+          { "label": "Übernachtungsgast", "price": "90 DKK" },
+          { "label": "Strompaket 100 (Dauercamper)", "price": "100 DKK", "note": "6,5 DKK/kWh" },
+          { "label": "Strompaket 250 (Dauercamper)", "price": "250 DKK", "note": "6,5 DKK/kWh" },
+          { "label": "Strompaket 500 (Dauercamper)", "price": "500 DKK", "note": "6,5 DKK/kWh" },
+          { "label": "Dusche – 2,5 Min.", "price": "5 DKK" }
+        ]
+      },
+      {
+        "heading": "Dauercamper-Plätze",
+        "subsections": [
+          {
+            "subheading": "Frühlingssaison 22.3. – 29.6.2026",
+            "entries": [
+              { "label": "Standardplatz", "price": "6.450 DKK" },
+              { "label": "Wasserplatz 29-49", "price": "6.750 DKK" },
+              { "label": "Stromanschluss", "price": "175 DKK" },
+              { "label": "Hund", "price": "150 DKK" }
+            ]
+          },
+          {
+            "subheading": "Ganze Saison 22.3. – 4.10.2026",
+            "entries": [
+              { "label": "Standardplatz", "price": "11.400 DKK" },
+              { "label": "Wasserplatz 29-49", "price": "12.200 DKK" },
+              { "label": "Stromanschluss", "price": "175 DKK" },
+              { "label": "Hund", "price": "300 DKK" }
+            ]
+          },
+          {
+            "subheading": "Herbstsaison 28.7. – 4.10.2026",
+            "entries": [
+              { "label": "Standardplatz", "price": "4.150 DKK" },
+              { "label": "Wasserplatz 29-49", "price": "4.450 DKK" },
+              { "label": "Stromanschluss", "price": "175 DKK" },
+              { "label": "Hund", "price": "150 DKK" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "eyebrow": "Gut zu wissen",
+    "title": "Platzordnung",
+    "intro": "Auf einem Campingplatz leben viele Menschen auf begrenztem Raum. Sie haben unterschiedliche Gewohnheiten, und gerade das ist Teil des Charmes des Campings. Es bedeutet aber auch, dass zwangsläufig einige wenige, einfache Regeln gelten müssen, damit Campinggäste einander nicht zur Last fallen.",
+    "categories": [
+      {
+        "title": "Aufenthalt auf dem Platz",
+        "content": "Der Platzwart und sein(e) Assistent(en) sind für Ruhe und Ordnung verantwortlich und stehen zur Verfügung, falls Probleme auftreten. Den Anweisungen des Platzwarts ist stets Folge zu leisten.\n\nWir bitten Sie, Rücksicht auf andere Campinggäste zu nehmen, und weisen darauf hin, dass lärmendes Verhalten nicht gestattet ist. In der Zeit von 23:00 bis 07:00 Uhr muss auf dem Platz Ruhe herrschen.\n\nWährend des Aufenthalts ist jegliches Fahren auf das Notwendigste zu beschränken, und dieses notwendige Fahren muss stets im Schritttempo (unter 15 km/h) erfolgen."
+      },
+      {
+        "title": "Zelte und Wohnwagen",
+        "content": "Es dürfen nur gewöhnliche Zelte und Vorzelte für Wohnwagen verwendet werden. Zelthäuser mit festen Wänden, Fenstern und Türen sind nicht erlaubt. Wohnwagen müssen mobil sein, d. h. nach dem Straßenverkehrsgesetz zum Fahren zugelassen oder mit der grünen ID-Nummer des Campingrats versehen sein.\n\nNach Anweisung des Platzwarts ist es erlaubt, ein Lagerzelt von ca. 3 m² aufzustellen. Die im Handel üblichen Windschutzzäune dürfen aufgestellt werden – darüber hinausgehende private Einzäunung des Stellplatzes ist nicht erlaubt. Grabungen auf dem Stellplatz dürfen nur nach Absprache mit dem Platzwart erfolgen."
+      },
+      {
+        "title": "Verbote und Regeln",
+        "content": "Der Gebrauch jeglicher Art von Waffen und Feuerwerk ist auf dem Platz verboten.\n\nHandel auf dem Platz wird nur akzeptiert, wenn die Genehmigung des Platzwarts vorliegt.\n\nGemeinschaftseinrichtungen, d. h. Toiletten, Waschräume, Küche und dergleichen, sind in demselben Zustand zu hinterlassen, in dem Sie sie vorfinden möchten, d. h. sauber und ordentlich.\n\nDie auf dem Platz aufgestellten Abfallbehälter sind stets zu benutzen und nur für Haushaltsabfälle; alles andere müssen Sie selbst entsorgen. Autowäsche ist nicht gestattet."
+      },
+      {
+        "title": "Spiel und Ballspiele",
+        "content": "Die meisten Campingplätze haben einen eigenen Spielplatz und Bolzplatz. Helfen Sie Ihren Kindern, die Stellen zu finden, an denen gespielt oder Ball gespielt werden darf. Ballspiele dürfen nicht zwischen Zelten und Wohnwagen stattfinden."
+      },
+      {
+        "title": "Hunde",
+        "content": "Hunde sind an einer kurzen Leine zu führen. Sie dürfen nicht unnötig bellen und Lärm machen, und das Gassigehen muss außerhalb des Platzgeländes erfolgen. Führen Sie stets einen Plastikbeutel mit, falls doch ein Missgeschick passiert."
+      },
+      {
+        "title": "Abreise",
+        "content": "Sie müssen dem Platzwart Ihre Abreisezeit so früh wie möglich mitteilen, besonders in Zeiten mit Andrang.\n\nSofern nichts anderes mit dem Platzwart vereinbart ist, muss Ihr Stellplatz oder Ihre Hütte spätestens um 12:00 Uhr geräumt und gereinigt sein, mit Rücksicht auf neu ankommende Gäste."
+      },
+      {
+        "title": "Haftung",
+        "content": "Der Campingplatzbesitzer und der Platzwart übernehmen keine Haftung für Beschädigung oder Verlust der Gegenstände der Campinggäste. Wer Gebäude, Material oder das Eigentum von Mitcampern beschädigt, kann nach den allgemeinen Schadensersatzregeln haftbar gemacht werden. Die meisten Campinggäste verhalten sich selbstverständlich rücksichtsvoll. Sanktionen gegen die wenigen, die die Platzordnung nicht einhalten, können in einem Platzverweis bestehen."
+      },
+      {
+        "title": "Natur und Umwelt",
+        "content": "Wir liegen mitten in der Natur, und wir bitten Sie, Rücksicht zu nehmen und sowohl Natur als auch Umwelt zu schützen – beide sind auf Ihren Schutz angewiesen."
+      },
+      {
+        "title": "Saisonplätze",
+        "content": "Für Campinggäste, die mit dem Campingplatz eine Vereinbarung über die Anmietung eines Saisonplatzes getroffen haben, gelten ausführlichere Regeln hinsichtlich der Mobilität der Wohnwagen, der Gestaltung der Stellplätze und der ID-Nummern-Regelung."
+      },
+      {
+        "title": "Laden von Elektroautos",
+        "content": "Das Laden ist nur an dem dafür ausgewiesenen Ladeplatz des Platzes erlaubt. An allen anderen Stellen ist es streng verboten, sein Elektroauto auf dem Platz zu laden. Dies liegt daran, dass unsere Anlage nicht dafür ausgelegt ist."
+      }
+    ]
+  },
+  "rentalTerms": {
+    "eyebrow": "Das Kleingedruckte",
+    "title": "Verkaufs-, Handels- und Stornobedingungen",
+    "subHeading": "Verkaufs- und Lieferbedingungen",
+    "cancellation": {
+      "title": "Widerrufsrecht und Erstattung",
+      "intro": "Die Stornierung muss schriftlich per E-Mail oder über das verwendete Buchungssystem erfolgen. Bei einer Stornierung gelten die folgenden Bedingungen:",
+      "terms": [
+        { "days": "Mehr als 30 Tage vor Anreise", "refund": "100 % Erstattung", "fee": "− 250,00 DKK Bearbeitungsgebühr" },
+        { "days": "30–14 Tage vor Anreise", "refund": "50 % Erstattung", "fee": "" },
+        { "days": "Weniger als 14 Tage vor Anreise", "refund": "Keine Erstattung", "fee": "" },
+        { "days": "Bei Nichterscheinen oder abgebrochenem Aufenthalt", "refund": "Keine Erstattung", "fee": "" }
+      ],
+      "refundLabel": "Erstattungen:",
+      "refundText": " Werden auf dasselbe Zahlungsmittel zurückgebucht, das bei der Buchung verwendet wurde."
+    },
+    "categories": [
+      {
+        "title": "Buchung und Bezahlung",
+        "content": "Alle Preise sind in dänischen Kronen (DKK) inkl. MwSt. und geltenden Abgaben angegeben, sofern nicht anders angegeben.\n\nBei Online-Buchungen wird der Aufenthalt bei der Reservierung vollständig bezahlt. Die Buchung wird erst verbindlich, wenn die Zahlung abgeschlossen ist und der Gast eine Buchungsbestätigung per E-Mail erhalten hat. Wird die Zahlung nicht abgeschlossen, wird die Reservierung automatisch storniert."
+      },
+      {
+        "title": "Buchungsbestätigung",
+        "content": "Nach abgeschlossener Buchung erhält der Gast eine Bestätigung per E-Mail. Es liegt in der Verantwortung des Gastes zu prüfen, ob die Angaben in der Bestätigung korrekt sind. Sollte die Buchungsbestätigung nicht kurz nach der Buchung eintreffen, wird der Gast gebeten, Skælskør Nor Camping zu kontaktieren."
+      },
+      {
+        "title": "Anreise und Abreise",
+        "content": "An- und Abreisezeiten sind in der Buchungsbestätigung oder auf der Website des Campingplatzes angegeben. Buchungen mit Anreise am selben Tag müssen spätestens um 13:00 Uhr über die Website vorgenommen werden. Danach ist eine Buchung nur telefonisch möglich und setzt eine Zahlung vor der Anreise voraus."
+      },
+      {
+        "title": "Nichterscheinen",
+        "content": "Erscheint der Gast am Anreisetag ohne vorherige Stornierung nicht, gilt die Reservierung als Nichterscheinen. Bei Nichterscheinen wird keine Erstattung gewährt. Die Reservierung kann von Skælskør Nor Camping nach der ersten Nacht ohne Anreise storniert werden."
+      },
+      {
+        "title": "Der Aufenthalt",
+        "content": "Skælskør Nor Camping ist bestrebt, dass die Angaben auf der Website und im Buchungssystem korrekt sind.\n\nEtwaige Fehler oder Mängel am Stellplatz, an der Hütte oder an den Einrichtungen sind so schnell wie möglich nach der Anreise zu melden, damit der Sachverhalt beurteilt und gegebenenfalls behoben werden kann. Bei der Abreise sind Hütten, Stellplätze und Inventar in ordentlichem und sauberem Zustand zu hinterlassen. Ist infolge der Nutzung durch den Gast eine zusätzliche Reinigung oder Behebung von Schäden erforderlich, kann Skælskør Nor Camping hierfür eine Gebühr erheben."
+      },
+      {
+        "title": "Anliegen bezüglich des Aufenthalts",
+        "content": "Sollte der Gast während des Aufenthalts Fehler oder Mängel feststellen, ist dies Skælskør Nor Camping so schnell wie möglich mitzuteilen, damit der Sachverhalt beurteilt und gegebenenfalls behoben werden kann. Unterlässt es der Gast, während des Aufenthalts auf den Sachverhalt hinzuweisen, kann dies die Möglichkeit einschränken, später Ansprüche bezüglich des Sachverhalts geltend zu machen."
+      },
+      {
+        "title": "Preisanpassung",
+        "content": "Skælskør Nor Camping behält sich das Recht vor, die Preise anzupassen, sodass sie die allgemeine Preisentwicklung und Änderungen der zugrunde liegenden Kosten widerspiegeln. Dies umfasst unter anderem Fälle, in denen Energieunternehmen oder andere Lieferanten ihre Preise erhöhen."
+      },
+      {
+        "title": "Haftung",
+        "content": "Skælskør Nor Camping kann nicht für Umstände außerhalb der Kontrolle des Campingplatzes haftbar gemacht werden, einschließlich Stromausfälle, Witterung, behördliche Anordnungen, Naturereignisse oder andere Umstände, auf die der Campingplatz keinen Einfluss hat.\n\nDer Campingplatz haftet nicht für die mitgebrachten Gegenstände, Fahrzeuge oder Wertsachen der Gäste."
+      },
+      {
+        "title": "Personenbezogene Daten",
+        "content": "Skælskør Nor Camping erfasst die Daten, die zur Durchführung der Reservierung und Verwaltung des Aufenthalts erforderlich sind. Die Daten werden vertraulich und in Übereinstimmung mit der geltenden Datenschutzgesetzgebung behandelt und nicht an Dritte weitergegeben, es sei denn, dies ist zur Durchführung der Zahlung erforderlich oder ergibt sich aus der Gesetzgebung."
+      },
+      {
+        "title": "Kontakt",
+        "content": "Bei Fragen zu Ihrer Buchung oder diesen Bedingungen können Sie Skælskør Nor Camping telefonisch unter +45 58 19 43 84 oder per E-Mail unter info@solskinscamping.dk kontaktieren."
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Datenschutz",
+    "title": "Datenschutzrichtlinie",
+    "paragraphs": [
+      "Wenn Sie einen Aufenthalt oder andere Leistungen auf der Website, telefonisch oder persönlich buchen, werden die personenbezogenen Daten, die Sie angeben, wie unter anderem Ihr Name oder besondere Informationen zu Ihrem Gesundheitszustand im Zusammenhang mit dem Aufenthalt, von Skælskør Nor Camping verarbeitet.",
+      "Wir verarbeiten auch erforderliche personenbezogene Daten, die Sie über Personen in Ihrer Reservierung angeben. Wenn Sie bei der Buchung des Aufenthalts personenbezogene Daten über andere Personen angeben, müssen Sie sicher sein, dass diese Personen einwilligen und dass Sie die Erlaubnis haben, die Daten weiterzugeben. Gegebenenfalls sollten Sie auch sicherstellen, dass sie verstehen, wie ihre personenbezogenen Daten von uns verwendet werden.",
+      "Wir können Ihre personenbezogenen Daten und E-Mail-Adresse auch verwenden, um Ihnen verschiedene Angebote zu Produkten und einen Newsletter zukommen zu lassen. Sie können diese Art von Marketing jederzeit abbestellen, indem Sie uns kontaktieren.",
+      "Skælskør Nor Camping verarbeitet alle personenbezogenen Daten nach geltendem Recht. Wir achten Ihre Integrität und möchten transparent sein, wie Ihre personenbezogenen Daten verarbeitet werden. Ihre personenbezogenen Daten gehören Ihnen."
+    ]
+  },
+  "contactSection": {
+    "eyebrow": "Kontaktieren Sie uns",
+    "title": "Kontaktinformationen",
+    "intro": "Haben Sie Fragen zu Buchung, Einrichtungen oder zur Anfahrt? Sie können uns jederzeit telefonisch erreichen, auch außerhalb der angegebenen Öffnungszeiten.",
+    "callUp": "Rufen Sie an",
+    "writeUs": "Schreiben Sie uns",
+    "visitUs": "Besuchen Sie uns",
+    "openingHoursHeading": "Öffnungszeiten",
+    "mapTitlePrefix": "Karte von"
+  },
+  "practicalNav": {
+    "onThisPage": "Auf dieser Seite",
+    "sectionsAria": "Abschnitte auf der Seite",
+    "sections": [
+      { "eyebrow": "Gut zu wissen", "label": "Platzordnung" },
+      { "eyebrow": "Das Kleingedruckte", "label": "Bedingungen" },
+      { "eyebrow": "Datenschutz", "label": "Datenschutzrichtlinie" }
+    ]
+  },
+  "navActionGrid": {
+    "items": [
+      { "label": "Übernachtung" },
+      { "label": "Preise" },
+      { "label": "Praktisches" },
+      { "label": "Kontakt" }
+    ]
+  },
+  "accommodation": {
+    "moreInfo": "Mehr Infos",
+    "cards": [
+      { "title": "Wohnwagen", "description": "Sehen Sie Preise und die Auswahl an Stellplätzen für Wohnwagen.", "imageAlt": "Sehen Sie Preise und die Auswahl an Stellplätzen für Wohnwagen." },
+      { "title": "Wohnmobil", "description": "Sehen Sie Preise und die Auswahl an Stellplätzen für Wohnmobile.", "imageAlt": "Sehen Sie Preise und die Auswahl an Stellplätzen für Wohnmobile." },
+      { "title": "Zelt", "description": "Sehen Sie Preise und die Auswahl an Stellplätzen für Zelte.", "imageAlt": "Sehen Sie Preise und die Auswahl an Stellplätzen für Zelte." },
+      { "title": "Hütten", "description": "Sehen Sie Preise und die Auswahl an gemütlichen Ferienhütten.", "imageAlt": "Sehen Sie Preise und die Auswahl an gemütlichen Ferienhütten." }
+    ]
+  },
+  "photoCollage": {
+    "alt1": "Camping vista",
+    "alt2": "Kilde House",
+    "alt3": "Hero landscape",
+    "alt4": "Cabin accommodation"
+  },
+  "pages": {
+    "prices": { "title": "Die Platzkarte", "imageAlt": "Skælskør Nor Camping" },
+    "contact": { "title": "Kontakt", "imageAlt": "Kildehuset bei Skælskør Nor Camping" },
+    "practical": { "title": "Praktische Informationen", "imageAlt": "Campingplatz an der Quelle" }
+  }
+}

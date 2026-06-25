@@ -1,8 +1,10 @@
 import { styled } from '@mui/material/styles'
+import { useTranslation } from 'react-i18next'
 import heroVideo from '../../assets/videos/hero-waterfront-comp.mp4'
 import logoBadge from '../../assets/images/logo-badge.webp'
 
 export default function Hero() {
+  const { t } = useTranslation()
 
   return (
     <HeroSection>
@@ -10,7 +12,7 @@ export default function Hero() {
       <HeroContent>
         <img
           src={logoBadge}
-          alt="Skælskør Nor Camping"
+          alt={t('hero.logoAlt')}
           style={{
             width: 'clamp(120px, 20vw, 550px)',
             filter: 'brightness(0) invert(1)',

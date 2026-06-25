@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useLocation } from 'react-router-dom'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
@@ -18,16 +19,15 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import BookingButton from '../BookingButton/BookingButton'
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import logoBadge from '../../assets/images/logo-badge.webp'
 
 const NAV_ITEMS = [
-  { to: '/', label: 'FORSIDE' },
-  { to: '/priser', label: 'PRISER' },
-  // { to: '/overnatning', label: 'Overnatning' },
-  // { to: '#faciliteter', label: 'Faciliteter' },
-  // { to: '#priser', label: 'Priser' },
-  { to: '/praktisk', label: 'PRAKTISK' },
-  { to: '/kontakt', label: 'KONTAKT' },
+  { to: '/', key: 'home' },
+  { to: '/priser', key: 'prices' },
+  // { to: '/overnatning', key: 'overnatning' },
+  { to: '/praktisk', key: 'practical' },
+  { to: '/kontakt', key: 'contact' },
 ] as const
 
 const PHONE = '+45 58 19 43 84'
@@ -36,6 +36,7 @@ const FACEBOOK = 'https://www.facebook.com/p/Sk%C3%A6lsk%C3%B8r-Nor-Camping-Hytt
 const INSTAGRAM = 'https://www.instagram.com/skaelskornor/'
 
 export default function Navbar () {
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const theme = useTheme()
@@ -79,14 +80,16 @@ export default function Navbar () {
           color: alpha(theme.palette.primary.contrastText, 0.75)
         }}
       >
-        {/* Left — reserved for reviews */}
-        <Stack direction='row' alignItems='center' gap={2} />
+        {/* Left — language switcher */}
+        <Stack direction='row' alignItems='center' gap={2}>
+          <LanguageSwitcher variant='dark' />
+        </Stack>
 
         {/* Right — contact + socials */}
         <Stack direction='row' alignItems='center' gap={2}>
-          <Link href={`tel:${PHONE.replace(/\s/g, '')}`} sx={linkSx}>
+          <Link href={`tel:${PHONE.replace(/\s/g, '')}`} sx={linkSx} aria-label={PHONE}>
             <PhoneIcon sx={{ fontSize: 13 }} />
-            {PHONE}
+            <Box component='span' sx={{ display: { xs: 'none', sm: 'inline' } }}>{PHONE}</Box>
           </Link>
           <Link
             href={`mailto:${EMAIL}`}
@@ -125,7 +128,7 @@ export default function Navbar () {
           {/* Mobile/tablet — hamburger */}
           <IconButton
             onClick={() => setOpen(true)}
-            aria-label='Åbn menu'
+            aria-label={t('nav.openMenu')}
             aria-expanded={open}
             sx={{
               display: { xs: 'inline-flex', md: 'none' },
@@ -146,9 +149,9 @@ export default function Navbar () {
               display: { xs: 'none', md: 'flex' },
             }}
           >
-            {NAV_ITEMS.map(({ to, label }) => (
+            {NAV_ITEMS.map(({ to, key }) => (
               <NavLink sx={{ fontWeight: "700" }} key={to} to={to} $scrolled={scrolled}>
-                {label}
+                {t(`nav.${key}`)}
               </NavLink>
             ))}
           </Stack>
@@ -171,20 +174,20 @@ export default function Navbar () {
               <img src={logoBadge} alt='' aria-hidden='true' />
               <span>Skælskør Nor Camping</span>
             </DrawerBrand>
-            <IconButton onClick={() => setOpen(false)} aria-label='Luk menu' edge='end'>
+            <IconButton onClick={() => setOpen(false)} aria-label={t('nav.closeMenu')} edge='end'>
               <CloseIcon />
             </IconButton>
           </DrawerHeader>
 
-          <Stack component='nav' aria-label='Hovedmenu' sx={{ mt: 1 }}>
-            {NAV_ITEMS.map(({ to, label }) => (
+          <Stack component='nav' aria-label={t('nav.mainMenu')} sx={{ mt: 1 }}>
+            {NAV_ITEMS.map(({ to, key }) => (
               <DrawerLink
                 key={to}
                 to={to}
                 onClick={() => setOpen(false)}
                 $active={pathname === to}
               >
-                {label}
+                {t(`nav.${key}`)}
               </DrawerLink>
             ))}
           </Stack>
@@ -193,7 +196,11 @@ export default function Navbar () {
 
           <Divider sx={{ borderColor: alpha(theme.palette.brand.sand, 0.6) }} />
 
-          <DrawerEyebrow>Kontakt</DrawerEyebrow>
+          <Box sx={{ mt: 2.5 }}>
+            <LanguageSwitcher variant='light' />
+          </Box>
+
+          <DrawerEyebrow>{t('nav.contactEyebrow')}</DrawerEyebrow>
           <Stack gap={1.25} sx={{ mb: 2.5 }}>
             <Link href={`tel:${PHONE.replace(/\s/g, '')}`} sx={drawerContactSx(theme)}>
               <PhoneIcon sx={{ fontSize: 17 }} />

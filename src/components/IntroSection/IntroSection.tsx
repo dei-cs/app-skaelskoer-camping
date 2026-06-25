@@ -1,39 +1,29 @@
 import { Box, Typography, Grid } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 import BookingButton from '../BookingButton/BookingButton'
+import type { IntroPillar } from '../../i18n/types'
 
-const pillars = [
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <path d="M14 3C14 3 6 10 6 17a8 8 0 0 0 16 0C22 10 14 3 14 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
-        <path d="M14 11v8M11 16l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-    label: 'NATUR & RO',
-    text: 'Skov og vand få skridt fra din plads.',
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <path d="M4 20L14 6l10 14H4Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
-        <path d="M10 20v-5h8v5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M3 20h22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    label: 'OVERNATNING',
-    text: 'Camping, telt, glamping og hyggelige hytter.',
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="10" cy="9" r="3" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="18" cy="9" r="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M4 22c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
-    label: 'FÆLLESSKAB',
-    text: 'Et åbent og imødekommende fællesskab med plads til alle.',
-  },
+const pillarIcons = [
+  (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <path d="M14 3C14 3 6 10 6 17a8 8 0 0 0 16 0C22 10 14 3 14 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
+      <path d="M14 11v8M11 16l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  ),
+  (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <path d="M4 20L14 6l10 14H4Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
+      <path d="M10 20v-5h8v5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+      <path d="M3 20h22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    </svg>
+  ),
+  (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="10" cy="9" r="3" stroke="currentColor" strokeWidth="1.5"/>
+      <circle cx="18" cy="9" r="3" stroke="currentColor" strokeWidth="1.5"/>
+      <path d="M4 22c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    </svg>
+  ),
 ]
 
 const fadeUp = `
@@ -44,6 +34,8 @@ const fadeUp = `
 `
 
 export default function IntroSection() {
+  const { t } = useTranslation()
+  const pillars = t('intro.pillars', { returnObjects: true }) as IntroPillar[]
   return (
     <Box
       component="section"
@@ -72,7 +64,7 @@ export default function IntroSection() {
           animationDelay: '0.05s',
         })}
       >
-        MERE END EN OVERNATNING
+        {t('intro.eyebrow')}
       </Typography>
 
       {/* Display heading */}
@@ -90,7 +82,7 @@ export default function IntroSection() {
           animationDelay: '0.15s',
         })}
       >
-        OPLEV SKÆLSKØR NOR
+        {t('intro.title')}
       </Typography>
 
       {/* Body text */}
@@ -107,7 +99,7 @@ export default function IntroSection() {
           animationDelay: '0.25s',
         })}
       >
-        Skælskør Nor Camping er mere end en overnatning. Det er stedet, hvor hverdagens tempo sænkes og naturen, nærværet og fællesskabet får plads. Mærk brisen fra Noret og vågn op til fuglesang.
+        {t('intro.body')}
       </Typography>
 
       {/* Booking CTA */}
@@ -151,7 +143,7 @@ export default function IntroSection() {
             }}
           >
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1.5 }}>
-              <Box sx={(theme) => ({ mb: 0.5, color: theme.palette.primary.main })}>{pillar.icon}</Box>
+              <Box sx={(theme) => ({ mb: 0.5, color: theme.palette.primary.main })}>{pillarIcons[i]}</Box>
               <Typography
                 component="span"
                 sx={(theme) => ({

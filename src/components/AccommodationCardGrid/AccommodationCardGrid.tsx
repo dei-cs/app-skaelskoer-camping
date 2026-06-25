@@ -8,86 +8,55 @@ import Box from '@mui/material/Box'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import { styled } from '@mui/material/styles'
 import { Link as RouterLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { SectionWrapper, SectionInner } from '../SectionWrapper/SectionWrapper'
+import type { AccommodationCard } from '../../i18n/types'
 
 import actionCampingvogn from '../../assets/images/action-campingvogn.webp'
 import actionAutocamper from '../../assets/images/action-autocamper.webp'
 import actionTelt from '../../assets/images/action-telt.webp'
 import actionCabin from '../../assets/images/action-cabin.webp'
 
-interface CardItem {
-  title: string
-  description: string
-  href: string
-  imageSrc: string
-  imageAlt: string
-  zoomImage?: boolean
-}
-
-const CARDS: CardItem[] = [
-  {
-    title: 'Campingvogn',
-    description: 'Se priser og udvalg af pladser til campingvogn.',
-    href: '/overnatning/campingvogn',
-    imageSrc: actionCampingvogn,
-    imageAlt: 'Se priser og udvalg af pladser til campingvogn.',
-    zoomImage: true,
-  },
-  {
-    title: 'Autocamper',
-    description: 'Se priser og udvalg af pladser til autocamper.',
-    href: '/overnatning/autocamper',
-    imageSrc: actionAutocamper,
-    imageAlt: 'Se priser og udvalg af pladser til autocamper.',
-  },
-  {
-    title: 'Telt',
-    description: 'Se priser og udvalg af pladser til telte.',
-    href: '/overnatning/telt',
-    imageSrc: actionTelt,
-    imageAlt: 'Se priser og udvalg af pladser til telte.',
-  },
-  {
-    title: 'Hytter',
-    description: 'Se priser og udvalg af hyggelige ferie-hytter.',
-    href: '/overnatning/hytter',
-    imageSrc: actionCabin,
-    imageAlt: 'Se priser og udvalg af hyggelige ferie-hytter.',
-    zoomImage: true,
-  },
+const CARD_ASSETS: { href: string; imageSrc: string; zoomImage?: boolean }[] = [
+  { href: '/overnatning/campingvogn', imageSrc: actionCampingvogn, zoomImage: true },
+  { href: '/overnatning/autocamper', imageSrc: actionAutocamper },
+  { href: '/overnatning/telt', imageSrc: actionTelt },
+  { href: '/overnatning/hytter', imageSrc: actionCabin, zoomImage: true },
 ]
 
 export default function AccommodationCardGrid() {
+  const { t } = useTranslation()
+  const cards = t('accommodation.cards', { returnObjects: true }) as AccommodationCard[]
   return (
     <SectionWrapper backgroundColor="default">
       <Inner>
         <Grid container spacing={3}>
-          {CARDS.map(card => (
-            <Grid key={card.href} size={{ xs: 12, sm: 6, md: 3 }}>
+          {CARD_ASSETS.map((asset, i) => (
+            <Grid key={asset.href} size={{ xs: 12, sm: 6, md: 3 }}>
               <StyledCard>
-                <StyledCardActionArea component={RouterLink} to={card.href}>
+                <StyledCardActionArea component={RouterLink} to={asset.href}>
                   <Box sx={{ height: 240, overflow: 'hidden' }}>
                     <CardMedia
                       component="img"
                       height="240"
-                      image={card.imageSrc}
-                      alt={card.imageAlt}
+                      image={asset.imageSrc}
+                      alt={cards[i].imageAlt}
                       sx={{
                         filter: 'grayscale(0.05) brightness(0.95) contrast(0.85)',
-                        ...(card.zoomImage && { transform: 'scale(1.20)' }),
+                        ...(asset.zoomImage && { transform: 'scale(1.20)' }),
                       }}
                     />
                   </Box>
                   <CardContent sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, p: 2.5 }}>
                     <Typography variant="h6" fontWeight={700} gutterBottom>
-                      {card.title}
+                      {cards[i].title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1, lineHeight: 1.6 }}>
-                      {card.description}
+                      {cards[i].description}
                     </Typography>
                     <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
                       <MereInfoBadge>
-                        Mere info
+                        {t('accommodation.moreInfo')}
                         <ArrowForwardIcon sx={{ fontSize: 14, ml: 0.5 }} />
                       </MereInfoBadge>
                     </Box>

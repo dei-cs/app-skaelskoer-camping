@@ -1,0 +1,309 @@
+{
+  "nav": {
+    "home": "HOME",
+    "prices": "PRICES",
+    "practical": "PRACTICAL",
+    "contact": "CONTACT",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainMenu": "Main menu",
+    "contactEyebrow": "Contact"
+  },
+  "common": {
+    "booking": "Booking",
+    "backToTop": "Back to top"
+  },
+  "meta": {
+    "title": "Skælskør Nor Camping"
+  },
+  "hero": {
+    "logoAlt": "Skælskør Nor Camping"
+  },
+  "footer": {
+    "tagline": "Camping close to nature by the Nor, with a focus on peace, quiet and cosiness.",
+    "navigationHeading": "Navigation",
+    "contactHeading": "Contact",
+    "openingHoursHeading": "Opening hours",
+    "facebookAria": "Skælskør Nor Camping on Facebook",
+    "instagramAria": "Skælskør Nor Camping on Instagram",
+    "nav": {
+      "home": "Home",
+      "prices": "Prices",
+      "practical": "Practical",
+      "contact": "Contact"
+    },
+    "openingHours": [
+      { "label": "Season (22 March - 4 October)", "hours": "" },
+      { "label": "Monday - Saturday", "hours": "10:00–12:00 & 14:00–16:00" },
+      { "label": "Sunday", "hours": "09:00–12:00" }
+    ]
+  },
+  "intro": {
+    "eyebrow": "MORE THAN AN OVERNIGHT STAY",
+    "title": "EXPERIENCE SKÆLSKØR NOR",
+    "body": "Skælskør Nor Camping is more than an overnight stay. It is the place where the pace of everyday life slows down and nature, presence and community take centre stage. Feel the breeze from the Nor and wake up to birdsong.",
+    "pillars": [
+      { "label": "NATURE & CALM", "text": "Forest and water just a few steps from your pitch." },
+      { "label": "ACCOMMODATION", "text": "Camping, tents, glamping and cosy cabins." },
+      { "label": "COMMUNITY", "text": "An open and welcoming community with room for everyone." }
+    ]
+  },
+  "prices": {
+    "eyebrow": "Prices & map",
+    "title": "Prices and pitch map",
+    "intro": "Find your pitch on the map and see the prices for tents, caravans, motorhomes, cabins and seasonal guests for the 2026 season.",
+    "mapAlt": "Map of the campsite",
+    "categories": [
+      {
+        "heading": "Motorhome",
+        "entries": [
+          { "label": "Pitch A-D", "price": "140 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Pitch 1-28", "price": "180 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Pitch 29-57", "price": "240 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Dog", "price": "20 DKK/night" }
+        ]
+      },
+      {
+        "heading": "Caravan",
+        "entries": [
+          { "label": "Pitch 1-28", "price": "180 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Pitch 29-57", "price": "240 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Dog", "price": "20 DKK/night" }
+        ]
+      },
+      {
+        "heading": "Tent",
+        "entries": [
+          { "label": "Pitch 1-28", "price": "180 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Pitch 29-57", "price": "240 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Pitch 69-72", "price": "125 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Dog", "price": "20 DKK/night" }
+        ]
+      },
+      {
+        "heading": "Cabin",
+        "entries": [
+          { "label": "Cabin", "price": "495 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Dog per stay", "price": "200 DKK" }
+        ]
+      },
+      {
+        "heading": "Glamping tent",
+        "entries": [
+          { "label": "Glamping tent (Pitch 58)", "price": "895 DKK/night", "note": "Incl. 1 person and electricity" },
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" }
+        ]
+      },
+      {
+        "heading": "Other",
+        "entries": [
+          { "label": "Day guest (8 AM–11 PM)", "price": "30 DKK" },
+          { "label": "Overnight guest", "price": "90 DKK" },
+          { "label": "Power package 100 (Seasonal guests)", "price": "100 DKK", "note": "6.5 DKK/kWh" },
+          { "label": "Power package 250 (Seasonal guests)", "price": "250 DKK", "note": "6.5 DKK/kWh" },
+          { "label": "Power package 500 (Seasonal guests)", "price": "500 DKK", "note": "6.5 DKK/kWh" },
+          { "label": "Shower – 2.5 min.", "price": "5 DKK" }
+        ]
+      },
+      {
+        "heading": "Seasonal pitches",
+        "subsections": [
+          {
+            "subheading": "Spring season 22/3 – 29/6 2026",
+            "entries": [
+              { "label": "Standard pitch", "price": "6,450 DKK" },
+              { "label": "Waterfront pitch 29-49", "price": "6,750 DKK" },
+              { "label": "Electricity connection", "price": "175 DKK" },
+              { "label": "Dog", "price": "150 DKK" }
+            ]
+          },
+          {
+            "subheading": "Full season 22/3 – 4/10 2026",
+            "entries": [
+              { "label": "Standard pitch", "price": "11,400 DKK" },
+              { "label": "Waterfront pitch 29-49", "price": "12,200 DKK" },
+              { "label": "Electricity connection", "price": "175 DKK" },
+              { "label": "Dog", "price": "300 DKK" }
+            ]
+          },
+          {
+            "subheading": "Autumn season 28/7 – 4/10 2026",
+            "entries": [
+              { "label": "Standard pitch", "price": "4,150 DKK" },
+              { "label": "Waterfront pitch 29-49", "price": "4,450 DKK" },
+              { "label": "Electricity connection", "price": "175 DKK" },
+              { "label": "Dog", "price": "150 DKK" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "eyebrow": "Good to know",
+    "title": "Rules",
+    "intro": "At a campsite, many people live within a limited area. They have different habits, and that is precisely part of the charm of camping. But it also means that a few simple rules are necessarily needed, so that no campers become a nuisance to others.",
+    "categories": [
+      {
+        "title": "Staying on the site",
+        "content": "The camp manager and his assistant(s) are responsible for peace and order and are available should any problems arise. The camp manager's instructions must always be followed.\n\nWe ask you to show consideration for other camping guests and point out that noisy behaviour is not permitted. Between 23:00 and 07:00 the site must be quiet.\n\nDuring your stay, all driving must be limited to what is strictly necessary, and this necessary driving must always take place at walking pace (under 15 km/h)."
+      },
+      {
+        "title": "Tents and caravans",
+        "content": "Only ordinary tents and awnings for caravans may be used. Tent houses with solid walls, windows and doors are not permitted. Caravans must be mobile, i.e. registered for road use under the Road Traffic Act or fitted with the Camping Council's green ID number.\n\nWith the camp manager's approval, it is permitted to set up a storage tent of approx. 3 m². The wind screens commonly available in shops may be put up – private fencing of the unit pitch beyond this is not permitted. Digging on the unit pitch may only take place by agreement with the camp manager."
+      },
+      {
+        "title": "Prohibitions and rules",
+        "content": "The use of any kind of weapon and fireworks is prohibited on the site.\n\nTrading on the site is only accepted if the camp manager's permission has been obtained.\n\nShared facilities, i.e. toilets, washrooms, kitchen and the like, must be left in the same condition as you would wish to find them, i.e. clean and tidy.\n\nThe waste containers placed on the site must always be used and only for household waste; everything else you must dispose of yourself. Car washing is not allowed."
+      },
+      {
+        "title": "Play and ball games",
+        "content": "Most campsites have their own playground and sports field. Help your children find the places where they may play or play ball. Ball games must not take place between tents and caravans."
+      },
+      {
+        "title": "Dogs",
+        "content": "Dogs must be kept on a short leash. They must not bark or make unnecessary noise, and walking must take place outside the site's area. Always carry a plastic bag in case of an accident."
+      },
+      {
+        "title": "Departure",
+        "content": "You must inform the camp manager of your departure time as early as possible, especially during busy periods.\n\nUnless otherwise agreed with the camp manager, your pitch or cabin must be cleared and cleaned by 12:00 at the latest, out of consideration for newly arriving guests."
+      },
+      {
+        "title": "Liability",
+        "content": "The campsite owner and camp manager accept no responsibility for damage to or loss of camping guests' belongings. Anyone who damages buildings, equipment or fellow campers' belongings may be held liable under the general rules of compensation. Most camping guests are of course considerate in their conduct. Sanctions against the few who do not comply with the site's rules may include expulsion."
+      },
+      {
+        "title": "Nature and environment",
+        "content": "We are located in the middle of nature, and we ask you to show consideration and protect both nature and the environment – both depend on your protection."
+      },
+      {
+        "title": "Seasonal pitches",
+        "content": "For camping guests who have entered into an agreement with the campsite for the rental of a seasonal pitch, more detailed rules apply regarding the mobility of caravans, the layout of the unit pitches and the ID number scheme."
+      },
+      {
+        "title": "Electric car charging",
+        "content": "Charging is only permitted at the site's designated charging area. Everywhere else it is strictly forbidden to charge your electric car on the site. This is because our installation is not dimensioned for it."
+      }
+    ]
+  },
+  "rentalTerms": {
+    "eyebrow": "The fine print",
+    "title": "Sales, trading and cancellation terms",
+    "subHeading": "Sales and delivery terms",
+    "cancellation": {
+      "title": "Right of cancellation and refund",
+      "intro": "Cancellation must be made in writing by e-mail or through the booking system used. The following terms apply to cancellation:",
+      "terms": [
+        { "days": "More than 30 days before arrival", "refund": "100% refund", "fee": "− DKK 250.00 administration fee" },
+        { "days": "30–14 days before arrival", "refund": "50% refund", "fee": "" },
+        { "days": "Less than 14 days before arrival", "refund": "No refund", "fee": "" },
+        { "days": "In case of no-show or interrupted stay", "refund": "No refund", "fee": "" }
+      ],
+      "refundLabel": "Refunds:",
+      "refundText": " Returned to the same payment method used for the booking."
+    },
+    "categories": [
+      {
+        "title": "Booking and Payment",
+        "content": "All prices are stated in Danish kroner (DKK) including VAT and applicable charges, unless otherwise stated.\n\nFor online bookings, the stay is paid in full at the time of reservation. The booking only becomes binding once payment has been completed and the guest has received a booking confirmation by e-mail. If payment is not completed, the reservation is cancelled automatically."
+      },
+      {
+        "title": "Booking confirmation",
+        "content": "After completing a booking, the guest receives a confirmation by e-mail. It is the guest's responsibility to check that the information in the confirmation is correct. If the booking confirmation is not received shortly after the booking, the guest is asked to contact Skælskør Nor Camping."
+      },
+      {
+        "title": "Arrival and departure",
+        "content": "Arrival and departure times are stated in the booking confirmation or on the campsite's website. Bookings with arrival on the same day must be made no later than 13:00 via the website. After that, booking can only be made by phone and requires payment before arrival."
+      },
+      {
+        "title": "No-show",
+        "content": "If the guest does not show up on the day of arrival without prior cancellation, the reservation is considered a no-show. No refund is given in case of a no-show. The reservation may be cancelled by Skælskør Nor Camping after the first night without arrival."
+      },
+      {
+        "title": "The stay",
+        "content": "Skælskør Nor Camping strives to ensure that the information on the website and in the booking system is correct.\n\nAny faults or shortcomings with the pitch, cabin or facilities must be reported as soon as possible after arrival, so that the matter can be assessed and possibly remedied. On departure, cabins, pitches and inventory must be left in a tidy and orderly condition. If extra cleaning or repair of damage is necessary as a result of the guest's use, Skælskør Nor Camping may charge for this."
+      },
+      {
+        "title": "Enquiries regarding the stay",
+        "content": "If the guest experiences faults or shortcomings during the stay, this should be reported to Skælskør Nor Camping as soon as possible, so that the matter can be assessed and possibly remedied. If the guest fails to point out the matter during the stay, this may limit the possibility of later making a claim regarding the matter."
+      },
+      {
+        "title": "Price adjustment",
+        "content": "Skælskør Nor Camping reserves the right to adjust prices so that they reflect general price developments and changes in underlying costs. This includes, among other things, cases where energy companies or other suppliers raise their prices."
+      },
+      {
+        "title": "Liability",
+        "content": "Skælskør Nor Camping cannot be held liable for circumstances beyond the campsite's control, including power failures, weather, official orders, natural events or other circumstances over which the campsite has no influence.\n\nThe campsite is not liable for guests' own belongings, vehicles or valuables."
+      },
+      {
+        "title": "Personal data",
+        "content": "Skælskør Nor Camping records the information necessary to complete the reservation and administer the stay. The information is treated confidentially and in accordance with applicable data protection legislation and is not passed on to third parties unless this is necessary to complete the payment or follows from legislation."
+      },
+      {
+        "title": "Contact",
+        "content": "If you have questions about your booking or these terms, you can contact Skælskør Nor Camping by phone at +45 58 19 43 84 or e-mail info@solskinscamping.dk."
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Personal data policy",
+    "paragraphs": [
+      "When you book a stay or other services on the website, by phone or in person, the personal data you provide, such as your name or specific information about your state of health in connection with the stay, will be processed by Skælskør Nor Camping.",
+      "We will also process necessary personal data that you provide about people in your reservation. If, when booking the stay, you provide personal data about other people, you must be sure that these people consent and that you have permission to disclose the information. Where relevant, you should also make sure they understand how their personal data is used by us.",
+      "We may also use your personal data and email to give you various offers on products and newsletters. You can unsubscribe from this kind of marketing at any time by contacting us.",
+      "Skælskør Nor Camping processes all personal data in accordance with applicable law. We safeguard your integrity and wish to be transparent about how your personal data is processed. Your personal data belongs to you."
+    ]
+  },
+  "contactSection": {
+    "eyebrow": "Contact us",
+    "title": "Contact information",
+    "intro": "Do you have questions about booking, facilities or how to get here? You can always reach us by phone, also outside the stated opening hours.",
+    "callUp": "Call us",
+    "writeUs": "Write to us",
+    "visitUs": "Visit us",
+    "openingHoursHeading": "Opening hours",
+    "mapTitlePrefix": "Map of"
+  },
+  "practicalNav": {
+    "onThisPage": "On this page",
+    "sectionsAria": "Sections on the page",
+    "sections": [
+      { "eyebrow": "Good to know", "label": "Rules" },
+      { "eyebrow": "The fine print", "label": "Terms" },
+      { "eyebrow": "Privacy", "label": "Personal data policy" }
+    ]
+  },
+  "navActionGrid": {
+    "items": [
+      { "label": "Accommodation" },
+      { "label": "Prices" },
+      { "label": "Practical" },
+      { "label": "Contact" }
+    ]
+  },
+  "accommodation": {
+    "moreInfo": "More info",
+    "cards": [
+      { "title": "Caravan", "description": "See prices and the selection of caravan pitches.", "imageAlt": "See prices and the selection of caravan pitches." },
+      { "title": "Motorhome", "description": "See prices and the selection of motorhome pitches.", "imageAlt": "See prices and the selection of motorhome pitches." },
+      { "title": "Tent", "description": "See prices and the selection of tent pitches.", "imageAlt": "See prices and the selection of tent pitches." },
+      { "title": "Cabins", "description": "See prices and the selection of cosy holiday cabins.", "imageAlt": "See prices and the selection of cosy holiday cabins." }
+    ]
+  },
+  "photoCollage": {
+    "alt1": "Camping vista",
+    "alt2": "Kilde House",
+    "alt3": "Hero landscape",
+    "alt4": "Cabin accommodation"
+  },
+  "pages": {
+    "prices": { "title": "The campsite map", "imageAlt": "Skælskør Nor Camping" },
+    "contact": { "title": "Contact", "imageAlt": "Kildehuset at Skælskør Nor Camping" },
+    "practical": { "title": "Practical Information", "imageAlt": "Campsite by the spring" }
+  }
+}
