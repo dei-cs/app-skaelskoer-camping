@@ -38,6 +38,11 @@ const saleCategories = [
       'Hvis gæsten oplever fejl eller mangler under opholdet, bedes dette meddelt til Skælskør Nor Camping hurtigst muligt, så forholdet kan vurderes og eventuelt afhjælpes. Undlader gæsten at gøre opmærksom på forholdet under opholdet, kan dette begrænse muligheden for senere at fremsætte krav vedrørende forholdet.'
   },
   {
+    title: 'Prisregulering',
+    content:
+      'Skælskør Nor Camping forbeholder sig retten til at regulere priserne, så de afspejler den almindelige prisudvikling og ændringer i underliggende omkostninger. Dette omfatter blandt andet tilfælde, hvor energiselskaber eller andre leverandører hæver deres priser.'
+  },
+  {
     title: 'Ansvar',
     content:
       'Skælskør Nor Camping kan ikke holdes ansvarlig for forhold uden for campingpladsens kontrol, herunder strømsvigt, vejrlig, myndighedspåbud, naturbegivenheder eller andre forhold, som campingpladsen ikke har indflydelse på.\n\nCampingpladsen hæfter ikke for gæsternes medbragte ejendele, køretøjer eller værdigenstande.'
@@ -189,6 +194,9 @@ export default function RentalTermsSection () {
               </InfoBlock>
               <InfoBlock title={saleCategories[8].title}>
                 {saleCategories[8].content}
+              </InfoBlock>
+              <InfoBlock title={saleCategories[9].title}>
+                {saleCategories[9].content}
               </InfoBlock>
             </Stack>
           </Box>
