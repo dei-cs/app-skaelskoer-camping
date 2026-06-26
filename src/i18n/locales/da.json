@@ -88,6 +88,7 @@
         "entries": [
           { "label": "Hytte", "price": "495 kr/nat", "note": "Inkl. 1 person og strøm" },
           { "label": "Ekstra overnattende gæst", "price": "90 kr/nat", "note": "Børn 0-11 år er gratis" },
+          { "label": "Sengelinned", "price": "90 kr", "note": "Obligatorisk – eller medbring dit eget" },
           { "label": "Hund pr. ophold", "price": "200 kr" }
         ]
       },
@@ -95,18 +96,19 @@
         "heading": "Glamping telt",
         "entries": [
           { "label": "Glamping telt (Plads 58)", "price": "895 kr/nat", "note": "Inkl. 1 person og strøm" },
-          { "label": "Ekstra overnattende gæst", "price": "90 kr/nat", "note": "Børn 0-11 år er gratis" }
+          { "label": "Ekstra overnattende gæst", "price": "90 kr/nat", "note": "Børn 0-11 år er gratis" },
+          { "label": "Ekstra seng", "price": "250 kr/person", "note": "Ved mere end 2 personer" },
+          { "label": "Sengelinned", "price": "90 kr", "note": "Obligatorisk – eller medbring dit eget" },
+          { "label": "Slutrengøring", "price": "175 kr", "note": "Obligatorisk" }
         ]
       },
       {
-        "heading": "Andet",
+        "heading": "Tillægskøb (klik på en vare for at købe)",
         "entries": [
-          { "label": "Dagsgæst (kl. 8–23)", "price": "30 kr" },
-          { "label": "Overnattende gæst", "price": "90 kr" },
-          { "label": "Strømpakke 100 (Fastliggere)", "price": "100 kr", "note": "6,5 kr/kWh" },
-          { "label": "Strømpakke 250 (Fastliggere)", "price": "250 kr", "note": "6,5 kr/kWh" },
-          { "label": "Strømpakke 500 (Fastliggere)", "price": "500 kr", "note": "6,5 kr/kWh" },
-          { "label": "Bad – 2,5 min.", "price": "5 kr" }
+          { "label": "Strømpakke 100 (Fastliggere)", "price": "100 kr", "note": "5,5 kr/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Strømpakke 250 (Fastliggere)", "price": "250 kr", "note": "5,5 kr/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Strømpakke 500 (Fastliggere)", "price": "500 kr", "note": "5,5 kr/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Bad – 2,5 min.", "price": "5 kr", "link": "https://www.tallyweb.dk/campnor/home" }
         ]
       },
       {
@@ -139,6 +141,13 @@
               { "label": "Hund", "price": "150 kr" }
             ]
           }
+        ]
+      },
+      {
+        "heading": "Andet",
+        "entries": [
+          { "label": "Dagsgæst (kl. 8–23)", "price": "30 kr" },
+          { "label": "Overnattende gæst", "price": "90 kr" }
         ]
       }
     ]
