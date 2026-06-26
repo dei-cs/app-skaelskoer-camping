@@ -14,6 +14,7 @@ export interface PriceEntry {
   label: string
   price: string
   note?: string
+  link?: string
 }
 
 export interface PriceSubsection {

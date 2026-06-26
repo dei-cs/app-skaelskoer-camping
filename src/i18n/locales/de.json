@@ -88,6 +88,7 @@
         "entries": [
           { "label": "Hütte", "price": "495 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
           { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Bettwäsche", "price": "90 DKK", "note": "Obligatorisch – oder eigene mitbringen" },
           { "label": "Hund pro Aufenthalt", "price": "200 DKK" }
         ]
       },
@@ -95,18 +96,19 @@
         "heading": "Glamping-Zelt",
         "entries": [
           { "label": "Glamping-Zelt (Platz 58)", "price": "895 DKK/Nacht", "note": "Inkl. 1 Person und Strom" },
-          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" }
+          { "label": "Zusätzlicher Übernachtungsgast", "price": "90 DKK/Nacht", "note": "Kinder 0-11 Jahre sind kostenlos" },
+          { "label": "Zusatzbett", "price": "250 DKK/Person", "note": "Bei mehr als 2 Personen" },
+          { "label": "Bettwäsche", "price": "90 DKK", "note": "Obligatorisch – oder eigene mitbringen" },
+          { "label": "Endreinigung", "price": "175 DKK", "note": "Obligatorisch" }
         ]
       },
       {
-        "heading": "Sonstiges",
+        "heading": "Zusatzkauf (zum Kaufen auf einen Artikel klicken)",
         "entries": [
-          { "label": "Tagesgast (8–23 Uhr)", "price": "30 DKK" },
-          { "label": "Übernachtungsgast", "price": "90 DKK" },
-          { "label": "Strompaket 100 (Dauercamper)", "price": "100 DKK", "note": "6,5 DKK/kWh" },
-          { "label": "Strompaket 250 (Dauercamper)", "price": "250 DKK", "note": "6,5 DKK/kWh" },
-          { "label": "Strompaket 500 (Dauercamper)", "price": "500 DKK", "note": "6,5 DKK/kWh" },
-          { "label": "Dusche – 2,5 Min.", "price": "5 DKK" }
+          { "label": "Strompaket 100 (Dauercamper)", "price": "100 DKK", "note": "5,5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Strompaket 250 (Dauercamper)", "price": "250 DKK", "note": "5,5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Strompaket 500 (Dauercamper)", "price": "500 DKK", "note": "5,5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Dusche – 2,5 Min.", "price": "5 DKK", "link": "https://www.tallyweb.dk/campnor/home" }
         ]
       },
       {
@@ -139,6 +141,13 @@
               { "label": "Hund", "price": "150 DKK" }
             ]
           }
+        ]
+      },
+      {
+        "heading": "Sonstiges",
+        "entries": [
+          { "label": "Tagesgast (8–23 Uhr)", "price": "30 DKK" },
+          { "label": "Übernachtungsgast", "price": "90 DKK" }
         ]
       }
     ]

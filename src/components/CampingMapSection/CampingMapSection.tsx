@@ -22,7 +22,12 @@ function EntryRows({ entries }: { entries: PriceEntry[] }) {
   return (
     <>
       {entries.map((entry, ei) => (
-        <PriceRow key={ei}>
+        <PriceRow
+          key={ei}
+          {...(entry.link
+            ? { as: 'a' as const, href: entry.link, target: '_blank', rel: 'noopener noreferrer' }
+            : {})}
+        >
           <div>
             <Typography variant='body1' sx={{ color: 'brand.earth' }}>{entry.label}</Typography>
             {entry.note && (
@@ -227,7 +232,18 @@ const PriceRow = styled('div')({
   justifyContent: 'space-between',
   alignItems: 'flex-start',
   gap: '12px',
-  paddingLeft: '12px'
+  paddingLeft: '12px',
+  '&[href]': {
+    textDecoration: 'none',
+    cursor: 'pointer',
+    borderRadius: '8px',
+    margin: '-4px -8px',
+    padding: '4px 8px 4px 12px',
+    transition: 'background-color 0.15s ease',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.04)',
+    },
+  },
 })
 
 const ActionsRow = styled('div')({

@@ -88,6 +88,7 @@
         "entries": [
           { "label": "Cabin", "price": "495 DKK/night", "note": "Incl. 1 person and electricity" },
           { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Bed linen", "price": "90 DKK", "note": "Mandatory – or bring your own" },
           { "label": "Dog per stay", "price": "200 DKK" }
         ]
       },
@@ -95,18 +96,19 @@
         "heading": "Glamping tent",
         "entries": [
           { "label": "Glamping tent (Pitch 58)", "price": "895 DKK/night", "note": "Incl. 1 person and electricity" },
-          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" }
+          { "label": "Extra overnight guest", "price": "90 DKK/night", "note": "Children 0-11 years are free" },
+          { "label": "Extra bed", "price": "250 DKK/person", "note": "For more than 2 people" },
+          { "label": "Bed linen", "price": "90 DKK", "note": "Mandatory – or bring your own" },
+          { "label": "Final cleaning", "price": "175 DKK", "note": "Mandatory" }
         ]
       },
       {
-        "heading": "Other",
+        "heading": "Additional purchase (click an item to buy)",
         "entries": [
-          { "label": "Day guest (8 AM–11 PM)", "price": "30 DKK" },
-          { "label": "Overnight guest", "price": "90 DKK" },
-          { "label": "Power package 100 (Seasonal guests)", "price": "100 DKK", "note": "6.5 DKK/kWh" },
-          { "label": "Power package 250 (Seasonal guests)", "price": "250 DKK", "note": "6.5 DKK/kWh" },
-          { "label": "Power package 500 (Seasonal guests)", "price": "500 DKK", "note": "6.5 DKK/kWh" },
-          { "label": "Shower – 2.5 min.", "price": "5 DKK" }
+          { "label": "Power package 100 (Seasonal guests)", "price": "100 DKK", "note": "5.5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Power package 250 (Seasonal guests)", "price": "250 DKK", "note": "5.5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Power package 500 (Seasonal guests)", "price": "500 DKK", "note": "5.5 DKK/kWh", "link": "https://www.tallyweb.dk/campnor/home" },
+          { "label": "Shower – 2.5 min.", "price": "5 DKK", "link": "https://www.tallyweb.dk/campnor/home" }
         ]
       },
       {
@@ -139,6 +141,13 @@
               { "label": "Dog", "price": "150 DKK" }
             ]
           }
+        ]
+      },
+      {
+        "heading": "Other",
+        "entries": [
+          { "label": "Day guest (8 AM–11 PM)", "price": "30 DKK" },
+          { "label": "Overnight guest", "price": "90 DKK" }
         ]
       }
     ]
