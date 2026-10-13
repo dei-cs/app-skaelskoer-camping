@@ -48,6 +48,20 @@
       { "label": "FÆLLESSKAB", "text": "Et åbent og imødekommende fællesskab med plads til alle." }
     ]
   },
+  "seasonClosed": {
+    "eyebrow": "TAK FOR I ÅR",
+    "title": "TAK FOR EN DEJLIG SÆSON",
+    "body": "Vores første sæson som nye ejere af Skælskør Nor Camping er slut, og vi kunne ikke have ønsket os en bedre start. Tak til alle jer campister for den varme velkomst, de gode snakke og de lange aftener ved Noret.",
+    "closedLabel": "Vinterlukket",
+    "closedFrom": "Lukket fra",
+    "closedUntil": "Til",
+    "closedNote": "I lukkeperioden er receptionen lukket, og der er ingen service på pladsen.",
+    "contactHeading": "Spørgsmål i vinterens løb?",
+    "contactText": "Ring eller skriv til os, så svarer vi så hurtigt, vi kan.",
+    "callUs": "Ring",
+    "writeUs": "Skriv",
+    "signoff": "Vi glæder os til at se jer igen til foråret."
+  },
   "prices": {
     "eyebrow": "Priser & kort",
     "title": "Priser og pladskort",

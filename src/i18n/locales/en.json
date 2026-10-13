@@ -48,6 +48,20 @@
       { "label": "COMMUNITY", "text": "An open and welcoming community with room for everyone." }
     ]
   },
+  "seasonClosed": {
+    "eyebrow": "THANK YOU FOR THIS YEAR",
+    "title": "THANK YOU FOR A LOVELY SEASON",
+    "body": "Our first season as the new owners of Skælskør Nor Camping has come to an end, and we couldn't have wished for a better start. Thank you to all of our campers for the warm welcome, the good conversations and the long evenings by the Nor.",
+    "closedLabel": "Closed for winter",
+    "closedFrom": "Closed from",
+    "closedUntil": "Until",
+    "closedNote": "During the closed period the reception is closed and no service is available at the campsite.",
+    "contactHeading": "Questions over the winter?",
+    "contactText": "Give us a call or send us an email, and we'll get back to you as soon as we can.",
+    "callUs": "Call",
+    "writeUs": "Email",
+    "signoff": "We look forward to welcoming you back in the spring."
+  },
   "prices": {
     "eyebrow": "Prices & map",
     "title": "Prices and pitch map",
